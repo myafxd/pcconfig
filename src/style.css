@@ -21,3 +21,12 @@
     @apply bg-white text-black dark:bg-[#141414] dark:text-white;
   }
 }
+
+body {
+  @apply overflow-x-hidden;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}

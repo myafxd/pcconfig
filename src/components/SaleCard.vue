@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#DFDFDF] dark:bg-[#202020] text-white rounded-2xl max-w-xl min-w-xs overflow-hidden flex flex-col">
+  <div class="bg-[#DFDFDF] dark:bg-[#202020] text-white rounded-2xl max-w-xl min-w-[300px] overflow-hidden flex flex-col">
     <div class="aspect-ratio">
       <img class="w-full h-full object-cover" src="/placeholder1.png" alt="Название модели">
     </div>

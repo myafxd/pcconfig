@@ -3,9 +3,9 @@ import Footer from './components/Footer.vue'
 import Navbar from './components/Navbar.vue'
 </script>
 <template>
-  <Navbar></Navbar>
+  <Navbar/>
   <router-view /> <!--  страница -->
-  <Footer></Footer>
+  <Footer/>
 </template>
 
 <style scoped></style>

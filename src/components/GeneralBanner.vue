@@ -1,8 +1,8 @@
 <template>
     <div class="relative bg-gray-800 text-white h-[700px] my-20 flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+  <div class="absolute inset-0 bg-neutral-300 dark:bg-neutral-800 bg-opacity-50 z-0"></div>
   <img src="/image.png" alt="Banner"
-    class="absolute inset-0 w-full h-full object-cover z-0" />
+    class="absolute inset-0 w-full h-full object-contain z-0 aspect-video" />
   <div class="relative z-20 text-left max-w-7xl text-center px-0">
     <h1 class="text-4xl md:text-5xl font-bold mb-2">
       Ваше воображение, <span class="text-white">наше воплощение</span>

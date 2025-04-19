@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#DEDEDE] dark:bg-[#191919] text-white py-12 mt-60">
+    <div class="bg-[#DEDEDE] dark:bg-[#191919] text-white py-12 mt-48">
         <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-around items-start gap-10">
             <div class="flex flex-col ">
                 <a href="http://goo.gl/eEeXsY" class="flex items-center space-x-3 rtl:space-x-reverse">

@@ -1,8 +1,36 @@
 <script setup>
-import GeneralBanner from '../components/GeneralBanner.vue';
-import TextCard from '../components/TextCard.vue';
-import NowCard from '../components/NowCard.vue';
-import HomeSlider from '../components/HomeSlider.vue';
+import GeneralBanner from '../components/GeneralBanner.vue'
+import TextCard from '../components/TextCard.vue'
+import NowCard from '../components/NowCard.vue'
+import HomeSlider from '../components/HomeSlider.vue'
+import AnswerQuestion from '../components/AnswerQuestion.vue'
+import { ref } from 'vue'
+const faqs = ref([
+  {
+    question: 'Как проверить совместимость компонентов?',
+    answer: 'Чтобы проверить совместимость, обратитесь к спецификациям на сайте производителя или воспользуйтесь нашим онлайн-конфигуратором.'
+  },
+  {
+    question: 'Как долго будет длиться доставка?',
+    answer: 'Срок доставки составляет от 3 до 7 рабочих дней в зависимости от региона.'
+  },
+  {
+    question: 'Для чего могут пригодиться упаковки от комплектующих?',
+    answer: 'Упаковки можно использовать для хранения кабелей и мелких деталей при переездах или ремонтах.'
+  },
+  {
+    question: 'Зачем предлагать вывести провода для накопителей?',
+    answer: 'Это облегчает будущую замену или установку накопителей без разбора корпуса.'
+  },
+  {
+    question: 'Можно ли будет поменять цвет подсветки компьютера?',
+    answer: 'Да, RGB-подсветку можно настроить в программном обеспечении или через контроллер внутри корпуса.'
+  },
+  {
+    question: 'Стоит ли устанавливать антивирусную программу на ПК?',
+    answer: 'Рекомендуется установить надежный антивирус сразу после сборки для защиты от вредоносных программ.'
+  }
+])
 </script>
 <template>
   <main>
@@ -40,7 +68,26 @@ import HomeSlider from '../components/HomeSlider.vue';
       <div class="text-5xl mb-6 pt-16">
         <span class="font-semibold">Наши партнеры</span>
       </div>
-    <HomeSlider></HomeSlider>
+      <HomeSlider/>
+    </div>
+    <div class="mx-auto max-w-[1300px] md:px-4 px-10 md:px-20 mt-32">
+      <div class="grid grid-cols-1 xl:grid-cols-7 xl:gap-5 items-start">
+        <!-- Заголовок -->
+        <div class="text-5xl mb-10 col-span-3">
+          <h2 class="font-semibold">Остались вопросы?</h2>
+          <h3 class="font-semibold text-neutral-500">У нас есть ответы.</h3>
+        </div>
+        <div class="space-y-3 col-span-4">
+          <div class="divide-y divide-neutral-600">
+            <AnswerQuestion
+              v-for="(item, idx) in faqs"
+              :key="idx"
+              :dynamicText1="item.question"
+              :dynamicText2="item.answer"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>

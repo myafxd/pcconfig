@@ -49,7 +49,6 @@ const faqs = ref([
 
 
       </div>
-
     </div>
     <div class="mx-auto max-w-[1300px] px-4 md:px-12 xl:px-20 mt-16">
       <div class="text-5xl mb-6 pt-16">
@@ -72,7 +71,6 @@ const faqs = ref([
     </div>
     <div class="mx-auto max-w-[1300px] md:px-4 px-10 md:px-12 xl:px-20 mt-32">
       <div class="grid grid-cols-1 xl:grid-cols-7 xl:gap-5 items-start">
-        <!-- Заголовок -->
         <div class="text-5xl mb-10 col-span-3">
           <h2 class="font-semibold">Остались вопросы?</h2>
           <h3 class="font-semibold text-neutral-500">У нас есть ответы.</h3>

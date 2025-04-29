@@ -13,19 +13,22 @@
             </div>
             <div class=" text-black dark:text-white grid grid-cols-2 sm:grid-cols-2 gap-8 text-md">
                 <div class="flex flex-col gap-2">
-                    <a href="/" class="hover:underline">Главная</a>
-                    <a href="#" class="hover:underline">О нас</a>
-                    <a href="#" class="hover:underline">Галерея</a>
-                    <a href="#" class="hover:underline">Заказать</a>
+                    <router-link to="/" class="hover:underline">Главная</router-link>
+                    <router-link to="/config" class="hover:underline">Конфигуратор</router-link>
+                    <router-link to="/ready" class="hover:underline">Готовые сборки</router-link>
+                    <router-link to="/cart" class="hover:underline">Корзина</router-link>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <a href="#" class="hover:underline">Каталог</a>
-                    <a href="#" class="hover:underline">Конфигуратор</a>
-                    <a href="#" class="hover:underline">Готовые сборки</a>
-                    <a href="#" class="hover:underline">Контакты</a>
+                    <router-link to="" class="hover:underline">О нас</router-link>
+                    <router-link to="" class="hover:underline">Галерея</router-link>
+                    <router-link to="/service" class="hover:underline">Услуги</router-link>
+                    <a href="#contacts" class="hover:underline">Контакты</a>
                 </div>
             </div>
-            <div class="flex flex-col gap-3 text-md">
+            <div :class="[
+                'flex flex-col gap-3 text-md transition-all duration-500 ease-out',
+                isHighlighted ? 'bg-blue-500/50 shadow-[0_0_0_12px_rgba(59,130,246,0.5)]' : ''
+            ]" id="contacts">
                 <div class="flex items-center text-black dark:text-white gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="fill-current" height="24" width="24"
                         viewBox="0 0 24 24">
@@ -75,13 +78,17 @@ export default {
     data() {
         return {
             isVisible: false,
+            isHighlighted: false,
         };
     },
     mounted() {
         window.addEventListener("scroll", this.toggleVisibility);
+        this.handleHighlight(); // на случай перехода сразу с якорем
+        window.addEventListener("hashchange", this.handleHighlight);
     },
     beforeUnmount() {
         window.removeEventListener("scroll", this.toggleVisibility);
+        window.removeEventListener("hashchange", this.handleHighlight);
     },
     methods: {
         toggleVisibility() {
@@ -92,6 +99,14 @@ export default {
                 top: 0,
                 behavior: "smooth",
             });
+        },
+        handleHighlight() {
+            if (window.location.hash === '#contacts') {
+                this.isHighlighted = true;
+                setTimeout(() => {
+                    this.isHighlighted = false;
+                }, 1500);
+            }
         },
     },
 };

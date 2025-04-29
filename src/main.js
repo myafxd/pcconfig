@@ -1,4 +1,4 @@
-import { createSSRApp } from 'vue'
+import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import './style.css'
 import App from './App.vue'
@@ -6,7 +6,10 @@ import App from './App.vue'
 import HomeView from './views/HomeView.vue'
 import ReadyView from './views/ReadyView.vue'
 import ConfigView from './views/ConfigView.vue'
-// Маршрутизация бро
+import ServicesView from './views/ServicesView.vue'
+import CartView from './views/CartView.vue'
+
+// Маршрутизация 
 const router = createRouter({
     routes: [
     {
@@ -21,11 +24,17 @@ const router = createRouter({
       path: '/ready',
       component: ReadyView
     },
+    {
+      path: '/service',
+      component: ServicesView
+    },
+    {
+      path: '/cart',
+      component: CartView
+    }
     ],
     history: createWebHistory()
 })
-
-// createApp(App).mount('#app')
-const app = createSSRApp(App) 
+const app = createApp(App) 
 app.use(router)
 app.mount("#app")

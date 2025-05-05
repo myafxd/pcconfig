@@ -2,39 +2,49 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import './style.css'
 import App from './App.vue'
-// компоненты для маршрутизации бро
+// компоненты для маршрутизации 
 import HomeView from './views/HomeView.vue'
 import ReadyView from './views/ReadyView.vue'
 import ConfigView from './views/ConfigView.vue'
 import ServicesView from './views/ServicesView.vue'
-import CartView from './views/CartView.vue'
+import OrderView from './views/OrderView.vue'
 
-// Маршрутизация 
 const router = createRouter({
     routes: [
     {
       path: '/',
-      component: HomeView
+      component: HomeView,
+      meta: { title: 'Главная - PConfig' }
     },
     {
       path: '/config',
-      component: ConfigView
+      component: ConfigView,
+      meta: { title: 'Конфигуратор - PConfig' }
     },
     {
       path: '/ready',
-      component: ReadyView
+      component: ReadyView,
+      meta: { title: 'Готовые сборки - PConfig' }
     },
     {
       path: '/service',
-      component: ServicesView
+      component: ServicesView,
+      meta: { title: 'Услуги - PConfig' }
     },
     {
-      path: '/cart',
-      component: CartView
+      path: '/order',
+      component: OrderView,
+      meta: { title: 'Оформление заказа - PConfig' }
     }
     ],
     history: createWebHistory()
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta?.title ?? 'PConfig'
+  next()
+})
+
 const app = createApp(App) 
 app.use(router)
 app.mount("#app")

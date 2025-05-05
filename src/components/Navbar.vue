@@ -1,7 +1,7 @@
 <template>
     <nav class="bg-transparent mt-8 p-4">
         <div class="max-w-screen-xl flex items-center justify-around mx-auto">
-            <a href="http://goo.gl/eEeXsY " class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="https://rutube.ru/video/ac1caf5cbb710e9e7d9b7812762c9def/?r=wd" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/image_2025-03-31_23-07-25.png" alt="Config" class="w-12">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PC.config</span>
             </a>
@@ -20,7 +20,7 @@
                         </path>
                     </svg>
                 </router-link>
-                <router-link to="/cart" class="text-black dark:text-white hover:text-gray-400 cursor-pointer">
+                <router-link to="/order" class="text-black dark:text-white hover:text-gray-400 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-8">
                         <path stroke-linecap="round" stroke-linejoin="round"

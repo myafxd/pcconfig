@@ -41,7 +41,7 @@
   const props = defineProps({
     components: {
       type: Array,
-      required: true
+      default: () => []
     }
   })
   
@@ -49,7 +49,7 @@
   const tabs = computed(() => [
     {
       title: 'Комплектующие',
-      content: props.components.map(comp => ({
+      content: (props.components || []).map(comp => ({
         label: comp.name,
         icon: comp.icon
       }))

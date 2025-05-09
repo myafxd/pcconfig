@@ -16,7 +16,7 @@
                     <router-link to="/" class="hover:underline">Главная</router-link>
                     <router-link to="/config" class="hover:underline">Конфигуратор</router-link>
                     <router-link to="/ready" class="hover:underline">Готовые сборки</router-link>
-                    <router-link to="/cart" class="hover:underline">Корзина</router-link>
+                    <router-link to="/order" class="hover:underline">Оформление заказа</router-link>
                 </div>
                 <div class="flex flex-col gap-2">
                     <router-link to="" class="hover:underline">О нас</router-link>

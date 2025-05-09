@@ -59,15 +59,26 @@
   const props = defineProps({
     title: String,
     icon: [Object, Function],
-    items: Array,
+    items: {
+      type: Array,
+      default: () => []
+    },
     selected: Object,
     componentKey: String
+  })
+
+  console.log(`ConfigList ${props.componentKey} props:`, {
+    title: props.title,
+    items: props.items,
+    componentKey: props.componentKey,
+    selected: props.selected
   })
   
   const emit = defineEmits(['update:selected'])
   
   // Табы: всегда "Все", плюс уникальные type если есть
   const filterOptions = computed(() => {
+    if (!props.items?.length) return ['Все']
     const types = props.items.map(i => i.type).filter(Boolean)
     const unique = Array.from(new Set(types))
     // если нет type, будет только "Все"
@@ -78,6 +89,7 @@
   
   // Фильтрация по выбранному табу (type)
   const filteredItems = computed(() => {
+    if (!props.items?.length) return []
     if (selectedFilter.value === 'Все') return props.items
     return props.items.filter(i => i.type === selectedFilter.value)
   })
@@ -86,7 +98,7 @@
   const localSelected = computed({
     get: () => props.selected?.value?.id ?? null,
     set: (id) => {
-      const item = props.items.find(i => i.id === id)
+      const item = props.items?.find(i => i.id === id)
       emit('update:selected', { value: item })
     }
   })
@@ -95,4 +107,3 @@
     return val?.toLocaleString('ru-RU') ?? ''
   }
   </script>
-  

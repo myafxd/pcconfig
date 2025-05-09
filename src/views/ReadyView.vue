@@ -20,7 +20,7 @@ import SaleCard from '../components/SaleCard.vue'
         <span class="text-neutral-500">Конфигурации</span>
         <span class="font-semibold">Серверные</span>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
         <SaleCard></SaleCard>
         <SaleCard></SaleCard>
       </div>

@@ -11,11 +11,11 @@
                 {{ monthlyPayment }}₽/мес
             </p>
             <div class="flex items-center gap-2 mt-2">
-                <a href="/order" class="flex-[2]">
+                <RouterLink to="/order" class="flex-[2]">
                     <button class="w-full bg-blue-500/80 text-white font-semibold py-2 rounded-lg text-xl">
                         Купить
                     </button>
-                </a>
+                </RouterLink>
                 <button type="button"
                     class="flex-[1] flex items-center justify-center h-10 bg-neutral-400 dark:bg-neutral-700 rounded-lg cursor-pointer"
                     aria-label="Сохранить">
@@ -56,18 +56,13 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useConfigStore } from '../stores/store.js';
+import { RouterLink } from 'vue-router';
+
+const configStore = useConfigStore();
+const selected = configStore.selected;
 
 const props = defineProps({
-    selected: {
-        type: Object,
-        default: () => ({
-            gpu: { value: null },
-            cpu: { value: null },
-            mobo: { value: null },
-            ram: { value: null },
-            psu: { value: null }
-        })
-    },
     components: {
         type: Array,
         default: () => []
@@ -75,13 +70,13 @@ const props = defineProps({
 })
 
 const totalPrice = computed(() => {
-    if (!props.selected) return '0'
+    if (!selected) return '0'
 
     let total = 0
-    const componentKeys = ['gpu', 'cpu', 'mobo', 'ram', 'psu']
+    const componentKeys = ['gpu', 'cpu', 'mobo', 'ram', 'psu', 'storage', 'fan', 'thermo', 'case']
 
     total = componentKeys.reduce((sum, key) => {
-        const component = props.selected[key]?.value
+        const component = selected[key]?.value
         return sum + (component?.price || 0)
     }, 0)
 
@@ -89,7 +84,7 @@ const totalPrice = computed(() => {
 })
 
 const monthlyPayment = computed(() => {
-    if (!props.selected) return '50 000'
+    if (!selected) return '50 000'
 
     const total = parseInt(totalPrice.value.replace(/\s/g, ''), 10) || 0
     const monthly = Math.round(total / 3)

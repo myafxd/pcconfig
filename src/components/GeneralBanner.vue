@@ -12,12 +12,12 @@
       Гарантируем совместимость
     </p>
     <div class="flex justify-left font-semibold gap-2 text-lg">
-      <a href="/config" class="bg-[#4173F0] hover:bg-blue-700 text-white px-5 py-2 rounded-md">
+      <router-link to="/config" class="bg-[#4173F0] hover:bg-blue-700 text-white px-5 py-2 rounded-md">
         Конфигуратор
-      </a>
-      <a href="/ready" class="bg-white text-gray-800 hover:bg-gray-100 px-5 py-2 rounded-md">
+      </router-link>
+      <router-link to="/ready" class="bg-white text-gray-800 hover:bg-gray-100 px-5 py-2 rounded-md">
         Готовые варианты
-      </a>
+      </router-link>
     </div>
   </div>
 </div>

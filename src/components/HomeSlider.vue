@@ -34,11 +34,11 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 const partners = [
-    { id: 1, name: 'СИТИЛИНК', logo: './public/image.png' },
-    { id: 2, name: 'М.Видео', logo: './public/image.png' },
-    { id: 3, name: 'OZON', logo: './public/image.png' },
-    { id: 4, name: 'DNS', logo: './public/image.png' },
-    { id: 5, name: 'Google', logo: './public/image.png' }
+    { id: 1, name: 'СИТИЛИНК', logo: '/image.png' },
+    { id: 2, name: 'М.Видео', logo: '/image.png' },
+    { id: 3, name: 'OZON', logo: '/image.png' },
+    { id: 4, name: 'DNS', logo: '/image.png' },
+    { id: 5, name: 'Google', logo: '/image.png' }
 ];
 const slider = ref(null);
 let scrollInterval = null;

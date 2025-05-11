@@ -29,8 +29,8 @@ import { onMounted, onUnmounted, watch, computed } from 'vue';
 import ConfigAccordion from '../components/ConfigAccordion.vue';
 import ConfigList from '../components/ConfigList.vue';
 import ConfigTotal from '../components/ConfigTotal.vue';
-import useCompatibility from '../composables/useCompatibility.js';
-import slugify from '../composables/slugify.js'
+import useCompatibility from '../scripts/useCompatibility.js';
+import slugify from '../scripts/slugify.js'
 import { components, useConfigStore } from '../stores/store.js';
 
 const configStore = useConfigStore();

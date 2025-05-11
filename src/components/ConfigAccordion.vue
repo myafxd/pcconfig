@@ -34,27 +34,24 @@
   </template>
   
   <script setup>
-  import { ref, computed, onMounted, onUnmounted, defineProps } from 'vue'
-  import slugify from '../composables/slugify.js'
+  import { ref, computed, onMounted, onUnmounted } from 'vue'
+  import slugify from '../scripts/slugify.js'
   
-  // Получаем массив компонентов из родителя
   const props = defineProps({
     components: {
       type: Array,
-      default: () => []
+      required: true
     }
   })
   
-  // Трансформируем components в tabs для универсальности разметки
   const tabs = computed(() => [
     {
       title: 'Комплектующие',
-      content: (props.components || []).map(comp => ({
+      content: props.components.map(comp => ({
         label: comp.name,
         icon: comp.icon
       }))
     }
-    // Если нужны другие вкладки - добавь сюда
   ])
   
   const openIndex = ref(0)
@@ -79,7 +76,7 @@
           }
         }
       },
-      { rootMargin: '-50% 0px -50% 0px' }
+      { rootMargin: '0px 0px -80% 0px' }
     )
   
     allSlugs.value.forEach(slug => {

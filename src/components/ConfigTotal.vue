@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[#DFDFDF] dark:bg-[#202020] text-black dark:text-white text-lg mt-6 rounded-2xl mb-8">
-        <img src="/placeholder1.png" class="object-cover w-full h-auto rounded-t-2xl">
+        <img :src="placeholderSrc" class="object-cover w-full h-auto rounded-t-2xl">
         <div class="p-4 flex flex-col flex-grow">
             <h3 class="text-4xl text-left font-semibold">Сборка #8840</h3>
             <hr class="mb-4 mt-1 w-auto border-neutral-700">
@@ -58,6 +58,8 @@
 import { computed } from 'vue'
 import { useConfigStore } from '../stores/store.js';
 import { RouterLink } from 'vue-router';
+import { placeholderSrc } from '../scripts/themeImage.js'
+
 
 const configStore = useConfigStore();
 const selected = configStore.selected;

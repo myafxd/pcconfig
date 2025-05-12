@@ -10,6 +10,7 @@ import ReadyView from './views/ReadyView.vue'
 import ConfigView from './views/ConfigView.vue'
 import ServicesView from './views/ServicesView.vue'
 import OrderView from './views/OrderView.vue'
+import LoginView from './views/LoginView.vue'
 
 const router = createRouter({
     routes: [
@@ -37,6 +38,11 @@ const router = createRouter({
       path: '/order',
       component: OrderView,
       meta: { title: 'Оформление заказа - PConfig' }
+    },
+    {
+      path: '/login',
+      component: LoginView,
+      meta: { title: 'Вход - PConfig' }
     }
     ],
     history: createWebHistory()

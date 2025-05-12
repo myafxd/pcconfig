@@ -68,7 +68,7 @@
             </div>
             <div class="flex flex-col col-span-2 xl:col-start-4 order-2 xl:mt-0 mt-12">
                 <div class="bg-none text-black dark:text-white text-lg mt-6 mb-8">
-                    <img src="/image.png" class="object-cover w-auto h-auto">
+                    <img :src="imageSrc" class="object-cover w-auto h-auto">
                     <div class="flex flex-col flex-grow">
                         <h3 class="text-4xl mt-4 text-left font-semibold">Сборка #8840</h3>
                         <hr class="mb-2 mt-2 w-auto border-neutral-500">
@@ -113,6 +113,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { components, useConfigStore } from '../stores/store.js'
+import { imageSrc } from '../scripts/themeImage.js'
 
 const configStore = useConfigStore()
 const selected = configStore.selected

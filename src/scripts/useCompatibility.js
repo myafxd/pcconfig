@@ -1,5 +1,9 @@
 import { ref } from 'vue'
 
+export function checkCompatibility(item) {
+  return !item.incompatible 
+}
+
 export default function useCompatibility(selected) {
   const lastError = ref('')
 

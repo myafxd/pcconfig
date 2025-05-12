@@ -33,17 +33,26 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
-const partners = [
-    { id: 1, name: 'СИТИЛИНК', logo: '/image.png' },
-    { id: 2, name: 'М.Видео', logo: '/image.png' },
-    { id: 3, name: 'OZON', logo: '/image.png' },
-    { id: 4, name: 'DNS', logo: '/image.png' },
-    { id: 5, name: 'Google', logo: '/image.png' }
+import { imageSrc } from '../scripts/themeImage.js'
+
+const partnersRaw = [
+    { id: 1, name: 'СИТИЛИНК', logo: null },
+    { id: 2, name: 'М.Видео', logo: null },
+    { id: 3, name: 'OZON', logo: null },
+    { id: 4, name: 'DNS', logo: null },
+    { id: 5, name: 'Google', logo: null }
 ];
+
+const partners = computed(() => partnersRaw.map(p => ({
+  ...p,
+  logo: p.logo || imageSrc.value
+})));
+
 const slider = ref(null);
 let scrollInterval = null;
 let isScrolling = false;
-const duplicatedPartners = [...partners, ...partners, ...partners];
+const duplicatedPartners = computed(() => [...partners.value, ...partners.value, ...partners.value]);
+
 const slide = (direction) => {
     if (isScrolling) return;
     isScrolling = true;

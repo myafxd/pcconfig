@@ -10,17 +10,16 @@
       </p>
     </div>
     <div class="aspect-ratio">
-      <img class="w-full h-full object-cover" src="/image.png" alt="Название модели">
+      <img class="w-full h-full object-cover" :src="imageSrc" alt="Название модели">
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    dynamicText1: { type: String, required: true },
-    dynamicText2: { type: String, required: true },
-    dynamicText3: { type: String, required: true }
-  }
-}
+<script setup>
+import { imageSrc } from '../scripts/themeImage.js'
+const props = defineProps({
+  dynamicText1: { type: String, required: true },
+  dynamicText2: { type: String, required: true },
+  dynamicText3: { type: String, required: true }
+})
 </script>

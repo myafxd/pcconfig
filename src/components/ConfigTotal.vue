@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-[#DFDFDF] dark:bg-[#202020] text-black dark:text-white text-lg mt-6 rounded-2xl mb-8">
-        <img :src="placeholderSrc" class="object-cover w-full h-auto rounded-t-2xl">
+    <div class="bg-[#DFDFDF] dark:bg-[#202020] text-black dark:text-white text-lg mt-6 rounded-2xl mb-8 max-w-md mx-auto">
+        <img :src="placeholderSrc" class="object-cover block w-auto h-auto rounded-t-2xl mx-auto">
         <div class="p-4 flex flex-col flex-grow">
             <h3 class="text-4xl text-left font-semibold">Сборка #8840</h3>
             <hr class="mb-4 mt-1 w-auto border-neutral-700">
@@ -12,12 +12,13 @@
             </p>
             <div class="flex items-center gap-2 mt-2">
                 <RouterLink to="/order" class="flex-[2]">
-                    <button class="w-full bg-blue-500/80 text-white font-semibold py-2 rounded-lg text-xl cursor-pointer">
+                    <button
+                        class="w-full bg-blue-500/80 text-white font-semibold py-1.5 rounded-lg text-2xl cursor-pointer">
                         Купить
                     </button>
                 </RouterLink>
                 <button type="button"
-                    class="flex-[1] flex items-center justify-center h-10 bg-neutral-400 dark:bg-neutral-700 rounded-lg cursor-pointer"
+                    class="flex-[1] flex items-center justify-center h-11 bg-neutral-400 dark:bg-neutral-700 rounded-lg cursor-pointer"
                     aria-label="Сохранить">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-white">
@@ -26,7 +27,7 @@
                     </svg>
                 </button>
                 <button type="button"
-                    class="flex-[1] flex items-center justify-center h-10 bg-neutral-400 dark:bg-neutral-700 rounded-lg cursor-pointer"
+                    class="flex-[1] flex items-center justify-center h-11 bg-neutral-400 dark:bg-neutral-700 rounded-lg cursor-pointer"
                     aria-label="Очистить" @click="$emit('clear')">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 text-white">
@@ -36,7 +37,6 @@
                 </button>
             </div>
 
-
             <hr class="mt-2 w-auto border-neutral-700">
 
             <div class="mt-2">
@@ -45,7 +45,8 @@
                     <template v-for="comp in components" :key="comp.key">
                         <div v-if="selected[comp.key]?.value" class="text-sm">
                             <div class="text-gray-600 dark:text-gray-400 text-lg">{{ comp.name }}</div>
-                            <div class="-mt-2 text-xl">{{ selected[comp.key].value.shortName || selected[comp.key].value.name }}</div>
+                            <div class="-mt-2 text-xl">{{ selected[comp.key].value.shortName ||
+                                selected[comp.key].value.name }}</div>
                         </div>
                     </template>
                 </div>
@@ -53,6 +54,7 @@
         </div>
     </div>
 </template>
+
 
 <script setup>
 import { computed } from 'vue'

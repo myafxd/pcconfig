@@ -45,7 +45,14 @@ const router = createRouter({
       meta: { title: 'Вход - PConfig' }
     }
     ],
-    history: createWebHistory()
+    history: createWebHistory(),
+    scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0, left: 0, behavior: 'smooth' }
+    }
+  }
 })
 
 router.beforeEach((to, from, next) => {

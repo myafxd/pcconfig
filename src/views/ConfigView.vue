@@ -1,28 +1,34 @@
 <template>
-  <main class="pb-20">
-    <div
-      class="mx-auto max-w-[1700px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 px-4 sm:px-8 md:px-16 lg:px-20 mt-8 sm:mt-16 mb-16">
-      <div class="sticky top-4 self-start hidden lg:block lg:col-span-2">
+  <div class="relative pb-20">
+    <div class="mx-auto max-w-[1700px] px-4 sm:px-6 md:px-8 xl:px-12 mt-8 sm:mt-16 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_350px] xl:grid-cols-[250px_1fr_350px]">
+      <aside class="hidden xl:block sticky top-4 self-start">
         <ConfigAccordion :components="components" />
-      </div>
-      <div class="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 lg:col-start-3 w-full">
+      </aside>
+      <main>
         <div v-for="component in components" :key="component.key" :id="slugify(component.name)">
-          <ConfigList :title="component.name" :componentKey="component.key" :items="component.items"
-            :icon="component.icon" :selected="selected[component.key]"
-            @update:selected="val => onSelect(component.key, val.value)" />
+          <ConfigList
+            :title="component.name"
+            :componentKey="component.key"
+            :items="component.items"
+            :icon="component.icon"
+            :selected="selected[component.key]"
+            @update:selected="val => onSelect(component.key, val.value)"
+          />
         </div>
-      </div>
-      <div class="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-2 lg:col-start-7">
-        <div class="sticky top-4">
-          <ConfigTotal :selected="selected" :components="components" @clear="clearBuild" />
-        </div>
-      </div>
+      </main>
+      <aside class="sticky top-4 self-start lg:col-span-1 xl:col-span-1">
+        <ConfigTotal :selected="selected" :components="components" @clear="clearBuild" />
+      </aside>
     </div>
-    <div v-if="lastError" class="fixed bottom-24 right-4 p-4 bg-red-500 text-white rounded shadow-lg z-50">
+    <div
+      v-if="lastError"
+      class="fixed bottom-24 right-4 p-4 bg-red-500 text-white rounded shadow-lg z-50"
+    >
       {{ lastError }}
     </div>
-  </main>
+  </div>
 </template>
+
 
 <script setup>
 import { onMounted, onUnmounted, watch, computed } from 'vue';

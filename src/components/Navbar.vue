@@ -5,7 +5,7 @@
                 <img src="/image_2025-03-31_23-07-25.png" alt="Config" class="w-12">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PC.config</span>
             </a>
-            <ul class="hidden md:flex space-x-8 text-white text-xl">
+            <ul class="hidden lg:flex space-x-8 text-white text-xl">
                 <li><router-link to="/" class="text-black dark:text-white hover:text-gray-400">Главная</router-link></li>
                 <li><router-link to="/config" class="text-black dark:text-white hover:text-gray-400">Конфигуратор</router-link></li>
                 <li><router-link to="/ready" class="text-black dark:text-white hover:text-gray-400">Готовые сборки</router-link></li>

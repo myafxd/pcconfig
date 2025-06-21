@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 import products from '../scripts/products.json'
 import { Cpu, BoomBox, CircuitBoard, Plug, HardDrive, Fan, Thermometer, MemoryStick, Smartphone as Case } from 'lucide-vue-next'
 
-// Ограничение количества для категорий
 function limitItems(arr, max) {
   return arr ? arr.slice(0, max) : [];
 }

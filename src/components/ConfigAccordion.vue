@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 min-w-36 mx-auto">
+    <div class="p-4 mx-auto">
       <div v-for="(tab, i) in tabs" :key="tab.title" class="mb-6 last:mb-0">
         <h2 @click="toggle(i)"
             class="flex items-center text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4 cursor-pointer select-none">

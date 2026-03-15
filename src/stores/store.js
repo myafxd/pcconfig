@@ -1,22 +1,6 @@
 import { defineStore } from 'pinia'
 import { Cpu, BoomBox, CircuitBoard, Plug, HardDrive, Fan, Thermometer, MemoryStick, Smartphone as Case } from 'lucide-vue-next'
 
-<<<<<<< HEAD
-function limitItems(arr, max) {
-  return arr ? arr.slice(0, max) : [];
-}
-
-export const allComponents = {
-  gpu: limitItems(products.gpu, 6),
-  cpu: limitItems(products.cpu, 6),
-  mobo: limitItems(products.mobo, 5),
-  ram: limitItems(products.ram, 5),
-  storage: limitItems(products.storage, 5),
-  psu: limitItems(products.psu, 5),
-  fan: limitItems(products.fan, 4),
-  thermo: limitItems(products.thermo, 4),
-  case: limitItems(products.case, 5)
-=======
 // Маппинг типов компонентов на иконки
 const typeIconMap = {
   'GPU': BoomBox,
@@ -28,8 +12,107 @@ const typeIconMap = {
   'CoolerFan': Fan,
   'ThermalPaste': Thermometer,
   'Case': Case
->>>>>>> e731792 (test ver 2.0)
 };
+
+// Маппинг типов компонентов на русские названия
+const typeNameMap = {
+  'GPU': 'Видеокарта',
+  'CPU': 'Процессор',
+  'Motherboard': 'Материнская плата',
+  'PSU': 'Блок питания',
+  'RAM': 'Оперативная память',
+  'Storage': 'Хранилище',
+  'CoolerFan': 'Охлаждение',
+  'ThermalPaste': 'Термоинтерфейс',
+  'Case': 'Корпус'
+};
+
+const API_URL = import.meta.env.VITE_API_URL || '/api';
+
+export const useConfigStore = defineStore('config', {
+  state: () => ({
+    allComponents: {},
+    components: [],
+    selected: {
+      GPU: { value: null },
+      CPU: { value: null },
+      Motherboard: { value: null },
+      RAM: { value: null },
+      PSU: { value: null },
+      Storage: { value: null },
+      CoolerFan: { value: null },
+      ThermalPaste: { value: null },
+      Case: { value: null }
+    },
+    isLoading: false,
+    lastError: null
+  }),
+  getters: {
+    getComponentsByType: (state) => (type) => state.allComponents[type] || [],
+    getTotalPrice: (state) => {
+      let total = 0
+      Object.entries(state.selected).forEach(([type, selection]) => {
+        if (selection.value) {
+          const component = state.allComponents[type]?.find(c => String(c.id) === String(selection.value))
+          if (component) {
+            total += Number(component.price) || 0
+          }
+        }
+      })
+      return total
+    }
+  },
+  actions: {
+    async loadComponents() {
+      this.isLoading = true
+      this.lastError = null
+
+      try {
+        const response = await fetch(`${API_URL}/api/components/grouped`)
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+        }
+
+        const data = await response.json()
+        this.allComponents = data
+
+        this.components = Object.keys(data)
+          .filter(type => type in typeIconMap)
+          .map(type => ({
+            key: type,
+            name: typeNameMap[type] || type,
+            items: data[type],
+            icon: typeIconMap[type]
+          }))
+
+        Object.keys(data).forEach(type => {
+          if (!(type in this.selected)) {
+            this.selected[type] = { value: null }
+          }
+        })
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+        this.lastError = `Ошибка загрузки компонентов: ${errorMessage}`
+        console.error(this.lastError, error)
+      } finally {
+        this.isLoading = false
+      }
+    },
+    setSelected(key, value) {
+      if (this.selected[key]) {
+        this.selected[key].value = value
+      }
+    },
+    clearSelected() {
+      Object.keys(this.selected).forEach(key => {
+        this.selected[key].value = null
+      })
+    }
+  },
+  persist: {
+    paths: ['selected']
+  }
+});
 
 // Маппинг типов компонентов на русские названия
 const typeNameMap = {

@@ -42,11 +42,17 @@
             <div class="mt-2">
                 <p class="text-center text-2xl mb-2">Конфигурация</p>
                 <div v-if="selected" class="flex flex-col gap-2">
-                    <template v-for="comp in components" :key="comp.key">
+                    <template v-for="comp in configStore.components" :key="comp.key">
                         <div v-if="selected[comp.key]?.value" class="text-sm">
                             <div class="text-gray-600 dark:text-gray-400 text-lg">{{ comp.name }}</div>
+<<<<<<< HEAD
                             <div class="-mt-2 text-xl">{{ selected[comp.key].value.shortName ||
                                 selected[comp.key].value.name }}</div>
+=======
+                            <div class="-mt-2 text-xl">
+                               {{ (getSelectedItem(comp.key)?.shortName) || (getSelectedItem(comp.key)?.name) || String(selected[comp.key].value) }}
+                            </div>
+>>>>>>> e731792 (test ver 2.0)
                         </div>
                     </template>
                 </div>
@@ -61,38 +67,22 @@ import { computed } from 'vue'
 import { useConfigStore } from '../stores/store.js';
 import { RouterLink } from 'vue-router';
 import { placeholderSrc } from '../scripts/themeImage.js'
+import { getTotalPrice, validateCompatibility } from '../scripts/useCompatibility.js'
 
 
 const configStore = useConfigStore();
 const selected = configStore.selected;
 
-const props = defineProps({
-    components: {
-        type: Array,
-        default: () => []
-    }
-})
+function getSelectedItem(key) {
+    const id = selected?.[key]?.value
+    if (!id) return null
+    const list = configStore.allComponents?.[key] ?? []
+    return list.find(i => String(i.id) === String(id)) || null
+}
 
-const totalPrice = computed(() => {
-    if (!selected) return '0'
+const numericTotal = computed(() => getTotalPrice(selected, configStore.allComponents))
+const totalPrice = computed(() => (numericTotal.value || 0).toLocaleString('ru-RU'))
+const monthlyPayment = computed(() => Math.round((numericTotal.value || 0) / 3).toLocaleString('ru-RU'))
 
-    let total = 0
-    const componentKeys = ['gpu', 'cpu', 'mobo', 'ram', 'psu', 'storage', 'fan', 'thermo', 'case']
-
-    total = componentKeys.reduce((sum, key) => {
-        const component = selected[key]?.value
-        return sum + (component?.price || 0)
-    }, 0)
-
-    return total > 0 ? total.toLocaleString('ru-RU') : '0.00'
-})
-
-const monthlyPayment = computed(() => {
-    if (!selected) return '50 000'
-
-    const total = parseInt(totalPrice.value.replace(/\s/g, ''), 10) || 0
-    const monthly = Math.round(total / 3)
-
-    return monthly.toLocaleString('ru-RU')
-})
+const compatibility = computed(() => validateCompatibility(selected, configStore.allComponents))
 </script>

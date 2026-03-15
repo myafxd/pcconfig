@@ -4,15 +4,28 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run server\" \"vite\"",
+    "server": "node server.js",
+    "dev:all": "concurrently \"npm run server\" \"npm run dev:frontend\"",
+    "dev:frontend": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "node --loader ts-node/esm prisma/seed.ts",
+    "db:seed": "prisma db seed"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
   },
   "dependencies": {
     "@nuxtjs/html-validator": "^2.1.0",
     "@primevue/core": "^4.3.3",
+    "@prisma/client": "^5.18.0",
     "axios": "^1.9.0",
     "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "lucide-vue-next": "^0.503.0",
     "pinia": "^3.0.2",
     "pinia-plugin-persistedstate": "^4.2.0",
@@ -25,8 +38,12 @@
     "@tailwindcss/vite": "^4.0.16",
     "@vitejs/plugin-vue": "^5.2.1",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.0.0",
     "postcss": "^8.5.3",
+    "prisma": "^5.18.0",
     "tailwindcss": "^4.0.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "vite": "^6.2.0"
   },
   "description": "This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.",

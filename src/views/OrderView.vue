@@ -77,7 +77,7 @@
                             <template v-for="comp in selectedComponents" :key="comp.key">
                                 <div v-if="selected[comp.key]?.value" class="text-sm">
                                     <div class="text-gray-600 dark:text-gray-400 text-lg">{{ comp.name }}</div>
-                                    <div class="-mt-2 text-xl">{{ selected[comp.key].value.shortName || selected[comp.key].value.name }}</div>
+                                    <div class="-mt-2 text-xl">{{ getSelectedItem(comp.key)?.shortName || getSelectedItem(comp.key)?.name || String(selected[comp.key].value) }}</div>
                                 </div>
                             </template>
                             <div v-if="hasMore" class="relative flex py-5 items-center">
@@ -112,37 +112,30 @@
 </template>
 <script setup>
 import { computed, ref } from 'vue'
-import { components, useConfigStore } from '../stores/store.js'
+import { useConfigStore } from '../stores/store.js'
 import { imageSrc } from '../scripts/themeImage.js'
+import { getTotalPrice, validateCompatibility } from '../scripts/useCompatibility.js'
 
 const configStore = useConfigStore()
 const selected = configStore.selected
 const isExpanded = ref(false)
 
 const selectedComponents = computed(() => {
-  const filtered = components.filter(comp => comp && selected[comp.key]?.value)
-  return isExpanded.value ? filtered : filtered.slice(0, 3)
+    const filtered = configStore.components.filter(comp => comp && selected[comp.key]?.value)
+    return isExpanded.value ? filtered : filtered.slice(0, 3)
 })
 
 const hasMore = computed(() => {
-  return components.filter(comp => comp && selected[comp.key]?.value).length > 3
+  return configStore.components.filter(comp => comp && selected[comp.key]?.value).length > 3
 })
 
-const selectedList = computed(() => {
-  return Object.entries(selected)
-    .filter(([key, val]) => val.value)
-    .map(([key, val]) => ({
-      key,
-      name: components.find(component => component?.key === key)?.name || key,
-      value: val.value.name
-    }))
-})
+function getSelectedItem(key) {
+    const id = selected?.[key]?.value
+    if (!id) return null
+    const list = configStore.allComponents?.[key] ?? []
+    return list.find(i => String(i.id) === String(id)) || null
+}
 
-const totalPrice = computed(() => {
-  return components.reduce((sum, comp) => {
-    if (!comp?.key) return sum
-    const val = selected[comp.key]?.value
-    return sum + (val?.price || 0)
-  }, 0)
-})
+const totalPrice = computed(() => getTotalPrice(selected, configStore.allComponents))
+const compatibility = computed(() => validateCompatibility(selected, configStore.allComponents))
 </script>

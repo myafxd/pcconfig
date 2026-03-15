@@ -1,64 +1,129 @@
 import { defineStore } from 'pinia'
-import products from '../scripts/products.json'
 import { Cpu, BoomBox, CircuitBoard, Plug, HardDrive, Fan, Thermometer, MemoryStick, Smartphone as Case } from 'lucide-vue-next'
 
-// Ограничение количества для категорий
-function limitItems(arr, max) {
-  return arr ? arr.slice(0, max) : [];
-}
-
-export const allComponents = {
-  gpu: limitItems(products.gpu, 6),
-  cpu: limitItems(products.cpu, 6),
-  mobo: limitItems(products.mobo, 5),
-  ram: limitItems(products.ram, 5),
-  storage: limitItems(products.storage, 5),
-  psu: limitItems(products.psu, 5),
-  fan: limitItems(products.fan, 4),
-  thermo: limitItems(products.thermo, 4),
-  case: limitItems(products.case, 5)
+// Маппинг типов компонентов на иконки
+const typeIconMap = {
+  'GPU': BoomBox,
+  'CPU': Cpu,
+  'Motherboard': CircuitBoard,
+  'PSU': Plug,
+  'RAM': MemoryStick,
+  'Storage': HardDrive,
+  'CoolerFan': Fan,
+  'ThermalPaste': Thermometer,
+  'Case': Case
 };
 
-export const components = [
-  { key: 'gpu', name: 'Видеокарта', items: allComponents.gpu, icon: BoomBox },
-  { key: 'psu', name: 'Блок питания', items: allComponents.psu, icon: Plug },
-  { key: 'cpu', name: 'Процессор', items: allComponents.cpu, icon: Cpu },
-  { key: 'mobo', name: 'Материнская плата', items: allComponents.mobo, icon: CircuitBoard },
-  { key: 'ram', name: 'Оперативная память', items: allComponents.ram, icon: MemoryStick },
-  { key: 'storage', name: 'Хранилище', items: allComponents.storage, icon: HardDrive },
-  { key: 'fan', name: 'Охлаждение', items: allComponents.fan, icon: Fan },
-  { key: 'thermo', name: 'Термоинтерфейс', items: allComponents.thermo, icon: Thermometer },
-  { key: 'case', name: 'Корпус', items: allComponents.case, icon: Case }
-];
+// Маппинг типов компонентов на русские названия
+const typeNameMap = {
+  'GPU': 'Видеокарта',
+  'CPU': 'Процессор',
+  'Motherboard': 'Материнская плата',
+  'PSU': 'Блок питания',
+  'RAM': 'Оперативная память',
+  'Storage': 'Хранилище',
+  'CoolerFan': 'Охлаждение',
+  'ThermalPaste': 'Термоинтерфейс',
+  'Case': 'Корпус'
+};
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 export const useConfigStore = defineStore('config', {
   state: () => ({
-    allComponents,
+    allComponents: {},
+    components: [],
     selected: {
-      gpu: { value: null },
-      cpu: { value: null },
-      mobo: { value: null },
-      ram: { value: null },
-      psu: { value: null },
-      storage: { value: null },
-      fan: { value: null },
-      thermo: { value: null },
-      case: { value: null }
-    }
-  }),
-  actions: {
-    setSelected(key, value) {
-      if (this.selected[key]) {
-        this.selected[key].value = value
-      }
+      GPU: { value: null },
+      CPU: { value: null },
+      Motherboard: { value: null },
+      RAM: { value: null },
+      PSU: { value: null },
+      Storage: { value: null },
+      CoolerFan: { value: null },
+      ThermalPaste: { value: null },
+      Case: { value: null }
     },
-    clearSelected() {
-      Object.keys(this.selected).forEach(key => {
-        this.selected[key].value = null
-      })
+    isLoading: false,
+    lastError: null
+  }),
+  
+  getters: {
+    getComponentsByType: (state) => (type) => {
+      return state.allComponents[type] || [];
+    },
+    getTotalPrice: (state) => {
+      let total = 0;
+      Object.entries(state.selected).forEach(([type, selection]) => {
+        if (selection.value) {
+          const component = state.allComponents[type]?.find(c => c.id === selection.value);
+          if (component) {
+            total += component.price;
+          }
+        }
+      });
+      return total;
     }
   },
+
+  actions: {
+    async loadComponents() {
+      this.isLoading = true;
+      this.lastError = null;
+
+      try {
+        const response = await fetch(`${API_URL}/api/components/grouped`);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        // Заполняем allComponents данными из API
+        this.allComponents = data;
+
+        // Создаем массив components для использования в компонентах
+        this.components = Object.keys(data)
+          .filter(type => type in typeIconMap)
+          .map(type => ({
+            key: type,
+            name: typeNameMap[type],
+            items: data[type],
+            icon: typeIconMap[type]
+          }));
+
+        // Инициализируем selected для новых типов компонентов
+        Object.keys(data).forEach(type => {
+          if (!(type in this.selected)) {
+            this.selected[type] = { value: null };
+          }
+        });
+
+        console.log('Компоненты успешно загружены из БД');
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        this.lastError = `Ошибка загрузки компонентов: ${errorMessage}`;
+        console.error(this.lastError, error);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    setSelected(key, value) {
+      if (this.selected[key]) {
+        this.selected[key].value = value;
+      }
+    },
+
+    clearSelected() {
+      Object.keys(this.selected).forEach(key => {
+        this.selected[key].value = null;
+      });
+    }
+  },
+
   persist: {
     paths: ['selected']
   }
-})
+});

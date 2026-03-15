@@ -1,0 +1,638 @@
+{
+  "gpu": [
+    {
+      "id": "gpu-1",
+      "name": "Видеокарта KFA2 GeForce RTX 4060 CORE Black [46NSL8MD9NXK] [PCIe 4.0 8 ГБ GDDR6, 128 бит, 3 x DisplayPort, HDMI, GPU 1830 МГц]",
+      "link": "https://www.dns-shop.ru/product/93826d9c94dced20/videokarta-kfa2-geforce-rtx-4060-core-black-46nsl8md9nxk/",
+      "price": 31999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/9f109558964ebc37c6686e187dd7f0f8/e19ad47a5d61e1ad9ad38ed88707c481d5ab730d0e21fd4cd2d1d4cb36bf29d8.jpg",
+      "type": "NVIDIA",
+      "power": 600,
+      "shortName": "KFA2 GeForce RTX 4060 CORE Black"
+    },
+    {
+      "id": "gpu-2",
+      "name": "Видеокарта Palit GeForce RTX 4060 Infinity 2 [NE64060019P1-1070L] [PCIe 4.0 8 ГБ GDDR6, 128 бит, 3 x DisplayPort, HDMI, GPU 1830 МГц]",
+      "link": "https://www.dns-shop.ru/product/c455f512e73aed20/videokarta-palit-geforce-rtx-4060-infinity-2-ne64060019p1-1070l/",
+      "price": 30999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/d9acc733ed33caddb291400783fad16a/12d4639330e37b528d4e33fd9f5389f6acdb14f3186ca8cb9dd49d74a5d095f7.jpg",
+      "type": "NVIDIA",
+      "power": 600,
+      "shortName": "Palit GeForce RTX 4060 Infinity 2"
+    },
+    {
+      "id": "gpu-3",
+      "name": "Видеокарта Palit GeForce RTX 5070 Ti GamingPro [NE7507T019T2-GB2031A] [PCIe 5.0 16 ГБ GDDR7, 256 бит, 3 x DisplayPort, HDMI, GPU 2295 МГц]",
+      "link": "https://www.dns-shop.ru/product/fe5cfcefe77fd582/videokarta-palit-geforce-rtx-5070-ti-gamingpro-ne7507t019t2-gb2031a/",
+      "price": 93999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/9d0b41dc7c1a4a411cbd4ccd53683a9c/ba2dae8912ce1cd847c108380504da78ddffc183faa328d2914584e7f7b6cf5c.jpg",
+      "type": "NVIDIA",
+      "power": 700,
+      "shortName": "Palit GeForce RTX 5070 Ti GamingPro"
+    },
+    {
+      "id": "gpu-4",
+      "name": "Видеокарта Palit GeForce RTX 5080 GamingPro [NE75080019T2-GB2031A] [PCIe 5.0 16 ГБ GDDR7, 256 бит, 3 x DisplayPort, HDMI, GPU 2295 МГц]",
+      "link": "https://www.dns-shop.ru/product/72372f3cd49ad9cb/videokarta-palit-geforce-rtx-5080-gamingpro-ne75080019t2-gb2031a/",
+      "price": 129499,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/5457677ed68751ea549332df321db4ac/daa98ea4de1f23fe2b2798de36f677ee4ddb8c1c9a8f62c7b058623614531765.jpg",
+      "type": "NVIDIA",
+      "power": 800,
+      "shortName": "Palit GeForce RTX 5080 GamingPro"
+    },
+    {
+      "id": "gpu-5",
+      "name": "Видеокарта MSI GeForce RTX 4060 VENTUS 2X BLACK OC [GeForce RTX 4060 VENTUS 2X] [PCIe 4.0 8 ГБ GDDR6, 128 бит, 3 x DisplayPort, HDMI, GPU 1830 МГц]",
+      "link": "https://www.dns-shop.ru/product/75db5ab00b1bed20/videokarta-msi-geforce-rtx-4060-ventus-2x-black-oc-geforce-rtx-4060-ventus-2x/",
+      "price": 32999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/a4bd7721b59ed97ada048f58713dbfa4/700bc971942dba313d3bbeae75c29e2e4c8bc0950201fe258927149d44df9b13.jpg",
+      "type": "NVIDIA",
+      "power": 600,
+      "shortName": "MSI GeForce RTX 4060 VENTUS 2X BLACK OC"
+    },
+    {
+      "id": "gpu-6",
+      "name": "Видеокарта Palit GeForce RTX 4060 Dual [NE64060019P1-1070D] [PCIe 4.0 8 ГБ GDDR6, 128 бит, 3 x DisplayPort, HDMI, GPU 1830 МГц]",
+      "link": "https://www.dns-shop.ru/product/bf41006e0b2fed20/videokarta-palit-geforce-rtx-4060-dual-ne64060019p1-1070d/",
+      "price": 32999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/3612a5275e4bf7909f40033427c76f18/8aee6d55380340e159e26ce5130ea565482b4c7bbc0df1f47994fd4c2f1b6730.jpg",
+      "type": "NVIDIA",
+      "power": 600,
+      "shortName": "Palit GeForce RTX 4060 Dual"
+    },
+    {
+      "id": "gpu-7",
+      "name": "Видеокарта Palit GeForce RTX 5090 GameRock [NE75090019R5-GB2020G] [PCIe 5.0 32 ГБ GDDR7, 512 бит, 3 x DisplayPort, HDMI, GPU 2017 МГц]",
+      "link": "https://www.dns-shop.ru/product/dab5d7dedf90d582/videokarta-palit-geforce-rtx-5090-gamerock-ne75090019r5-gb2020g/",
+      "price": 284999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/2f10e521730024ff6aad691f0723a4b0/b2a991b7d9a188776e2adcf56e753da463f1e188ab0b54cd9ec9b0bb85e57691.jpg",
+      "type": "NVIDIA",
+      "power": 800,
+      "shortName": "Palit GeForce RTX 5090 GameRock"
+    },
+    {
+      "id": "gpu-8",
+      "name": "Видеокарта Palit GeForce RTX 5080 GameRock [NE75080019T2-GB2030G] [PCIe 5.0 16 ГБ GDDR7, 256 бит, 3 x DisplayPort, HDMI, GPU 2295 МГц]",
+      "link": "https://www.dns-shop.ru/product/5058d787c0eed582/videokarta-palit-geforce-rtx-5080-gamerock-ne75080019t2-gb2030g/",
+      "price": 139999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/04dc4c9796b8a15002852116ce51e641/3d2db71b6147a36b21543b02face212e2dfc4c2161f2d0a5315fb40cb8a120fb.jpg",
+      "type": "NVIDIA",
+      "power": 800,
+      "shortName": "Palit GeForce RTX 5080 GameRock"
+    },
+    {
+      "id": "gpu-9",
+      "name": "Видеокарта Palit GeForce RTX 5090 GameRock OC [NE75090S19R5-GB2020G] [PCIe 5.0 32 ГБ GDDR7, 512 бит, 3 x DisplayPort, HDMI, GPU 2017 МГц]",
+      "link": "https://www.dns-shop.ru/product/96dfe7f6df90d582/videokarta-palit-geforce-rtx-5090-gamerock-oc-ne75090s19r5-gb2020g/",
+      "price": 295999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/688d594f0bd6c45c5a46d5c702ea3a09/c12579a8a21ec2041f3ac9de91ba52702fb8ad9bb184d5c1e8a6062b149abcb5.jpg",
+      "type": "NVIDIA",
+      "power": 800,
+      "shortName": "Palit GeForce RTX 5090 GameRock OC"
+    },
+    {
+      "id": "gpu-10",
+      "name": "Видеокарта MSI GeForce RTX 4060 VENTUS 2X WHITE OC [GeForce RTX 4060 VENTUS 2X WHITE 8G OC] [PCIe 4.0 8 ГБ GDDR6, 128 бит, 3 x DisplayPort, HDMI, GPU 1830 МГц]",
+      "link": "https://www.dns-shop.ru/product/697e6b357ec2ed20/videokarta-msi-geforce-rtx-4060-ventus-2x-white-oc-geforce-rtx-4060-ventus-2x-white-8g-oc/",
+      "price": 33999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/3f66ae39a56b30b08589aea742643cd4/00b1b0a2b0a67e6ba9bd976ae20e1a1506bca0017521d302b004fcf6319bd059.jpg",
+      "type": "NVIDIA",
+      "power": 600,
+      "shortName": "MSI GeForce RTX 4060 VENTUS 2X WHITE OC"
+    }
+  ],
+  "cpu": [
+    {
+      "id": "cpu-1",
+      "name": "Процессор AMD Ryzen 5 7500F OEM [AM5, 6 x 3.7 ГГц, L2 - 6 МБ, L3 - 32 МБ, 2 х DDR5-5200 МГц, TDP 65 Вт]",
+      "link": "https://www.dns-shop.ru/product/d4bde9994d11ed20/processor-amd-ryzen-5-7500f-oem/",
+      "price": 14299,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/836841bb8bdd6ad8e493bba324233dcd/e6293f21cc6d64c505e37405fa55d329827db7f8cd863e254841198e037f2386.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "shortName": "AMD Ryzen 5 7500F OEM"
+    },
+    {
+      "id": "cpu-2",
+      "name": "Процессор AMD Ryzen 7 7800X3D OEM [AM5, 8 x 4.2 ГГц, L2 - 8 МБ, L3 - 96 МБ, 2 х DDR5-5200 МГц, AMD Radeon Graphics, TDP 120 Вт]",
+      "link": "https://www.dns-shop.ru/product/3ecad0b7a46fed20/processor-amd-ryzen-7-7800x3d-oem/",
+      "price": 40499,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/b9237ebddac13a82b8929bdae276d576/a456db21c4184e22b75ccb0c07c70c520aacaa20efed5a50da6e0c6c3d17c2d7.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "shortName": "AMD Ryzen 7 7800X3D OEM"
+    },
+    {
+      "id": "cpu-3",
+      "name": "Процессор AMD Ryzen 7 7700 OEM [AM5, 8 x 3.8 ГГц, L2 - 8 МБ, L3 - 32 МБ, 2 х DDR5-5200 МГц, AMD Radeon Graphics, TDP 65 Вт]",
+      "link": "https://www.dns-shop.ru/product/de177556e959ed20/processor-amd-ryzen-7-7700-oem/",
+      "price": 19599,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/bc03a44afde45380771af8f2ecaa2d3d/60057f62d0973f08bb8c6b88a88e5e3c74183832e2ce055d851478941f58eec8.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "shortName": "AMD Ryzen 7 7700 OEM"
+    },
+    {
+      "id": "cpu-4",
+      "name": "Процессор Intel Core i5-12400F OEM [LGA 1700, 6 x 2.5 ГГц, L2 - 7.5 МБ, L3 - 18 МБ, 2 х DDR4, DDR5-4800 МГц, TDP 117 Вт]",
+      "link": "https://www.dns-shop.ru/product/0a2114a7fcc9ed20/processor-intel-core-i5-12400f-oem/",
+      "price": 9899,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/74cfd71ee58d5460c0b88addb66b0a5b/200e4a08e74afcc3cf1d54d47b758cbbf14c71973a64009553347d2b234b5af4.jpg",
+      "type": "Intel",
+      "socket": "LGA1700",
+      "shortName": "Intel Core i5-12400F OEM"
+    },
+    {
+      "id": "cpu-5",
+      "name": "Процессор AMD Ryzen 5 5600 OEM [AM4, 6 x 3.5 ГГц, L2 - 3 МБ, L3 - 32 МБ, 2 х DDR4-3200 МГц, TDP 65 Вт]",
+      "link": "https://www.dns-shop.ru/product/6d7a8c58afebed20/processor-amd-ryzen-5-5600-oem/",
+      "price": 8099,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/fe862d20ea6f38132e12617b7a83de4e/923c2be60cfd72de7906f3c654d78c880ebec785c7d62041b4bb7713f33acf36.jpg",
+      "type": "AMD",
+      "socket": "AM4",
+      "shortName": "AMD Ryzen 5 5600 OEM"
+    },
+    {
+      "id": "cpu-6",
+      "name": "Процессор AMD Ryzen 7 9800X3D OEM [AM5, 8 x 4.7 ГГц, L2 - 8 МБ, L3 - 96 МБ, 2 х DDR5-5600 МГц, AMD Radeon Graphics, TDP 120 Вт]",
+      "link": "https://www.dns-shop.ru/product/104767799cdfd582/processor-amd-ryzen-7-9800x3d-oem/",
+      "price": 55799,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/1269fed9c84632d63bff50ab936d148e/d25d58c44e7c15ea8828ee4cb6718486c53a48e3af8c02a216ceba902125a737.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "shortName": "AMD Ryzen 7 9800X3D OEM"
+    },
+    {
+      "id": "cpu-7",
+      "name": "Процессор AMD Ryzen 7 5700X OEM [AM4, 8 x 3.4 ГГц, L2 - 4 МБ, L3 - 32 МБ, 2 х DDR4-3200 МГц, TDP 65 Вт]",
+      "link": "https://www.dns-shop.ru/product/96054164afeaed20/processor-amd-ryzen-7-5700x-oem/",
+      "price": 11799,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/20b55e718b21018a99978f8a7b8f9597/cd544c1a7746cb99b220d5c90b1a2107a94a08112077e6015d2040a83afae4c5.jpg",
+      "type": "AMD",
+      "socket": "AM4",
+      "shortName": "AMD Ryzen 7 5700X OEM"
+    },
+    {
+      "id": "cpu-8",
+      "name": "Процессор AMD Ryzen 7 5700X3D OEM [AM4, 8 x 3 ГГц, L2 - 4 МБ, L3 - 96 МБ, 2 х DDR4-3200 МГц, TDP 105 Вт]",
+      "link": "https://www.dns-shop.ru/product/f2c7468da491ed20/processor-amd-ryzen-7-5700x3d-oem/",
+      "price": 23699,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/79cc37081f91f854c18cb1bcceb4c749/4ab5a189c3cb2ce418448a37eddde325831eb800a9cb33ec216a65735b3d9906.jpg",
+      "type": "AMD",
+      "socket": "AM4",
+      "shortName": "AMD Ryzen 7 5700X3D OEM"
+    },
+    {
+      "id": "cpu-9",
+      "name": "Процессор Intel Core i5-12400 OEM [LGA 1700, 6 x 2.5 ГГц, L2 - 7.5 МБ, L3 - 18 МБ, 2 х DDR4, DDR5-4800 МГц, Intel UHD Graphics 730, TDP 117 Вт]",
+      "link": "https://www.dns-shop.ru/product/d3c6a3f806feed20/processor-intel-core-i5-12400-oem/",
+      "price": 12299,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/60825bb4e8e10123a3b056ff0ddd583b/13695d4cf06fee91b4ae558e71766270e404a3234357dea01f294deae7cae632.jpg",
+      "type": "Intel",
+      "socket": "LGA1700",
+      "shortName": "Intel Core i5-12400 OEM"
+    },
+    {
+      "id": "cpu-10",
+      "name": "Процессор Intel Core i5-14600KF OEM [LGA 1700, 6P x 3.5 ГГц, 8E x 2.6 ГГц, L2 - 20 МБ, L3 - 24 МБ, 2 х DDR4, DDR5-5600 МГц, TDP 181 Вт]",
+      "link": "https://www.dns-shop.ru/product/163592727233ed20/processor-intel-core-i5-14600kf-oem/",
+      "price": 18799,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/90d588f8386f4884a6efed40573ccf3c/4037d46c89ca05f8c1a0d40564cc322949ee5732e4715b0b6dff8f9cd91989c6.jpg",
+      "type": "Intel",
+      "socket": "LGA1700",
+      "shortName": "Intel Core i5-14600KF OEM"
+    }
+  ],
+  "mobo": [
+    {
+      "id": "mobo-1",
+      "name": "Материнская плата MSI B650 GAMING PLUS WIFI [AM5, AMD B650, 4xDDR5-4800 МГц, 2xPCI-Ex16, 2xM.2, Standard-ATX]",
+      "link": "https://www.dns-shop.ru/product/414e9c60e254ed20/materinskaa-plata-msi-b650-gaming-plus-wifi/",
+      "price": 16999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/c0111689cd9007f900dcffbcb05578fb/f3465b1dd9af53fe73dc06da168b9d1a42ea0530c467065cb097a541a07d152e.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "shortName": "MSI B650 GAMING PLUS WIFI"
+    },
+    {
+      "id": "mobo-2",
+      "name": "Материнская плата MSI MPG B550 GAMING PLUS [AM4, AMD B550, 4xDDR4-3200 МГц, 2xPCI-Ex16, 2xM.2, Standard-ATX]",
+      "link": "https://www.dns-shop.ru/product/232aa9f9b9a11b80/materinskaa-plata-msi-mpg-b550-gaming-plus/",
+      "price": 10299,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/c7238ed4260323a7c817b17bec620c83/489e1dfb774c68ca8c80a1cd66477739765abc0c00722185d2c1178489ffdec3.png",
+      "type": "AMD",
+      "socket": "AM4",
+      "ramType": "DDR4",
+      "shortName": "MSI MPG B550 GAMING PLUS"
+    },
+    {
+      "id": "mobo-3",
+      "name": "Материнская плата MSI B760 GAMING PLUS WIFI [LGA 1700, Intel B760, 4xDDR5-5600 МГц, 5xPCI-Ex16, 2xM.2, Standard-ATX]",
+      "link": "https://www.dns-shop.ru/product/b53ec787e255ed20/materinskaa-plata-msi-b760-gaming-plus-wifi/",
+      "price": 13299,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/a54130b116be6f3e08b5e74d4987886c/55735805018792740450a7b0d3ba40cce356a95c49ee03468a65b3c69fbffff0.jpg",
+      "type": "Intel",
+      "socket": "LGA1700",
+      "ramType": "DDR5",
+      "shortName": "MSI B760 GAMING PLUS WIFI"
+    },
+    {
+      "id": "mobo-4",
+      "name": "Материнская плата MSI PRO H610M-E DDR4 [LGA 1700, Intel H610, 2xDDR4-3200 МГц, 1xPCI-Ex16, 1xM.2, Micro-ATX]",
+      "link": "https://www.dns-shop.ru/product/56027c0307e7ed20/materinskaa-plata-msi-pro-h610m-e-ddr4/",
+      "price": 5399,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/c82d2fa96f8b6477c6812fc4578bbf46/42b825362ccf8279b9369bce65f661ba05014e6da6ed6681f4c3715c622ea2b2.jpg",
+      "type": "Intel",
+      "socket": "LGA1700",
+      "ramType": "DDR4",
+      "shortName": "MSI PRO H610M-E DDR4"
+    },
+    {
+      "id": "mobo-5",
+      "name": "Материнская плата MSI PRO B650-S WIFI [AM5, AMD B650, 4xDDR5-4800 МГц, 2xPCI-Ex16, 2xM.2, Standard-ATX]",
+      "link": "https://www.dns-shop.ru/product/7d98e5645604ed20/materinskaa-plata-msi-pro-b650-s-wifi/",
+      "price": 14799,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/c40429ae5538f7b986d4de6ef1916883/8ccbc8af3ed05efa426100e1bf548ac7ab8a298a71fd846e31d29382ea5e5447.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "shortName": "MSI PRO B650-S WIFI"
+    },
+    {
+      "id": "mobo-6",
+      "name": "Материнская плата MSI PRO B650-A WIFI [AM5, AMD B650, 4xDDR5-4800 МГц, 2xPCI-Ex16, 3xM.2, Standard-ATX]",
+      "link": "https://www.dns-shop.ru/product/87a19b005eafd9cb/materinskaa-plata-msi-pro-b650-a-wifi/",
+      "price": 18999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/2e513e77628b547509ef02a6308d1316/90a9e94a3f7dfde5c904fd7f2068f4173670cd42319737657821fb651dc40f67.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "shortName": "MSI PRO B650-A WIFI"
+    },
+    {
+      "id": "mobo-7",
+      "name": "Материнская плата MSI B650M GAMING PLUS WIFI [AM5, AMD B650, 4xDDR5-4800 МГц, 1xPCI-Ex16, 2xM.2, Micro-ATX]",
+      "link": "https://www.dns-shop.ru/product/77439794ba6ded20/materinskaa-plata-msi-b650m-gaming-plus-wifi/",
+      "price": 16999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/ef3bc87d27f64195b074a812ecce1f87/929188b9cee5dda3cfd0a45ddb1eb92039478e518c550990f0a81044ab256413.jpg",
+      "type": "AMD",
+      "socket": "AM5",
+      "ramType": "DDR5",
+      "shortName": "MSI B650M GAMING PLUS WIFI"
+    }
+  ],
+  "ram": [
+    {
+      "id": "ram-1",
+      "name": "Оперативная память Kingston FURY Beast Black [KF556C36BBEK2-32] 32 ГБ [DDR5, 16 ГБx2 шт, 5600 МГц, 36(CL)-38-38]",
+      "link": "https://www.dns-shop.ru/product/17e2942c3953ed20/operativnaa-pamat-kingston-fury-beast-black-kf556c36bbek2-32-32-gb/",
+      "price": 8599,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/49bcf684400a416a1609967cfd91279f/4e836d64618e0ce56357a6a571fa4d0f644a5600fe297db94f2fc97216c46992.jpg",
+      "type": "DDR5",
+      "shortName": "Kingston FURY Beast Black 32 ГБ DDR5"
+    },
+    {
+      "id": "ram-2",
+      "name": "Оперативная память ADATA XPG Lancer Blade [AX5U5600C4616G-DTLABBK] 32 ГБ [DDR5, 16 ГБx2 шт, 5600 МГц, 46(CL)-45-45]",
+      "link": "https://www.dns-shop.ru/product/66c8c7c94231ed20/operativnaa-pamat-adata-xpg-lancer-blade-ax5u5600c4616g-dtlabbk-32-gb/",
+      "price": 7999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/518d4e9801ab64f72de81a2f131f8b1a/b2b4f5c4fbc9f3a8df9ac23f9f529542805f92701b7aed8e24f904922d7d4454.jpg",
+      "type": "DDR5",
+      "shortName": "ADATA XPG Lancer Blade 32 ГБ DDR5"
+    },
+    {
+      "id": "ram-3",
+      "name": "Оперативная память ADATA XPG Lancer Blade [AX5U6000C3016G-DTLABBK] 32 ГБ [DDR5, 16 ГБx2 шт, 6000 МГц, 30(CL)-40-40]",
+      "link": "https://www.dns-shop.ru/product/bee7ed0131b5ed20/operativnaa-pamat-adata-xpg-lancer-blade-ax5u6000c3016g-dtlabbk-32-gb/",
+      "price": 9999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/f8153f6276e17ddeae72c5797d85a638/0e4c74c526e3e31602ec5d1ef1ba38c597a1f9333b1b5384877c07833da52c9e.jpg",
+      "type": "DDR5",
+      "shortName": "ADATA XPG Lancer Blade 32 ГБ DDR5"
+    },
+    {
+      "id": "ram-4",
+      "name": "Оперативная память Kingston FURY Beast Black [KF432C16BBK2/32] 32 ГБ [DDR4, 16 ГБx2 шт, 3200 МГц, 16(CL)-20-20]",
+      "link": "https://www.dns-shop.ru/product/9ed60ce7fae5ed20/operativnaa-pamat-kingston-fury-beast-black-kf432c16bbk232-32-gb/",
+      "price": 6899,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/1eb8b67a3bbcc60e7e47a5bbc09254a9/027438eed270bf22a038558d26a8fd6c8c0f38c80417a277f2480013f1921870.jpg",
+      "type": "DDR4",
+      "shortName": "Kingston FURY Beast Black 32 ГБ DDR4"
+    },
+    {
+      "id": "ram-5",
+      "name": "Оперативная память ADATA XPG Lancer Blade RGB [AX5U6000C3016G-DTLABRBK] 32 ГБ [DDR5, 16 ГБx2 шт, 6000 МГц, 30(CL)-40-40]",
+      "link": "https://www.dns-shop.ru/product/7ba2e84831b6ed20/operativnaa-pamat-adata-xpg-lancer-blade-rgb-ax5u6000c3016g-dtlabrbk-32-gb/",
+      "price": 10499,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/83d977d3896335ca9fa8d34bd5aa6c4d/2acfe3f6dc3849684b2861755930169d807b321a731939c245a07260f8151b53.png",
+      "type": "DDR5",
+      "shortName": "ADATA XPG Lancer Blade RGB 32 ГБ DDR5"
+    },
+    {
+      "id": "ram-6",
+      "name": "Оперативная память ADATA XPG GAMMIX D20 [AX4U320016G16A-DCBK20] 32 ГБ [DDR4, 16 ГБx2 шт, 3200 МГц, 16(CL)-20-20]",
+      "link": "https://www.dns-shop.ru/product/028eddb6ea99d763/operativnaa-pamat-adata-xpg-gammix-d20-ax4u320016g16a-dcbk20-32-gb/",
+      "price": 5799,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/f12b5d44ccf9d9f9a5b71f2abcc934f8/9a54524a70fe1694cb0e11d2d18a81cdb5dc1e3fb425476c01c53bb074b1ff03.jpg",
+      "type": "DDR4",
+      "shortName": "ADATA XPG GAMMIX D20 32 ГБ DDR4"
+    },
+    {
+      "id": "ram-7",
+      "name": "Оперативная память Kingston FURY Beast Black [KF432C16BBK2/16] 16 ГБ [DDR4, 8 ГБx2 шт, 3200 МГц, 16(CL)-18-18-32]",
+      "link": "https://www.dns-shop.ru/product/bb6fb3a7fad5ed20/operativnaa-pamat-kingston-fury-beast-black-kf432c16bbk216-16-gb/",
+      "price": 3399,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/a68db43507a5fd726fbd5b9a233fcfbc/f562d5d7c5aded9062b33c2f7f46ca625e7391fc96aeda3e27f56955a0906641.jpg",
+      "type": "DDR4",
+      "shortName": "Kingston FURY Beast Black 16 ГБ DDR4"
+    }
+  ],
+  "psu": [
+    {
+      "id": "psu-1",
+      "name": "Блок питания DEEPCOOL PF750 [R-PF750D-HA0B-EU] черный [750 Вт, 80+, APFC, 20+4 pin, 2 x 4+4 pin CPU, 6 SATA, 4 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/5117a7c5fa5fd763/blok-pitania-deepcool-pf750-r-pf750d-ha0b-eu-cernyj/",
+      "price": 4399,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/5e9f030434c70f648a598d5c4372a0a0/74c7a89208c221e785c0d1da83dbbf565f4636c187bce0b6c803074a329228be.jpg",
+      "wattage": 750,
+      "shortName": "DEEPCOOL PF750"
+    },
+    {
+      "id": "psu-2",
+      "name": "Блок питания Cougar GEX850 [31GE085001P01] черный [850 Вт, 80+ Gold, APFC, 20+4 pin, 2 x 4+4 pin CPU, 8 SATA, 6 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/2cc61ff0d0bc3332/blok-pitania-cougar-gex850-31ge085001p01-cernyj/",
+      "price": 10199,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/16391f3fa5c5d8f8c3840cbe67192d73/2021b4d11301c8925ee3dbaca1b02f01c5e5874fafe3c090f1934d467ae1d6fd.jpg",
+      "wattage": 850,
+      "shortName": "Cougar GEX850"
+    },
+    {
+      "id": "psu-3",
+      "name": "Блок питания DEEPCOOL PF600 [R-PF600D-HA0B-EU] черный [600 Вт, 80+, APFC, 20+4 pin, 2 x 4+4 pin CPU, 6 SATA, 4 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/16ed5812fa5ed763/blok-pitania-deepcool-pf600-r-pf600d-ha0b-eu-cernyj/",
+      "price": 3799,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/a90a71656ab9ada9d0a0affa108ef9df/3dae8745ada29377c1cb4fae4c3ee668914c9dcce025ca3134e44c8958076100.jpg",
+      "wattage": 600,
+      "shortName": "DEEPCOOL PF600"
+    },
+    {
+      "id": "psu-4",
+      "name": "Блок питания DEEPCOOL PF650 [R-PF650D-HA0B-EU] черный [650 Вт, 80+, APFC, 20+4 pin, 2 x 4+4 pin CPU, 6 SATA, 4 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/759476c1fa5ed763/blok-pitania-deepcool-pf650-r-pf650d-ha0b-eu-cernyj/",
+      "price": 3999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/05ccf82457b9073130d7a6dd545e596a/bd544b281ba204cc60f1455bd06d55f818769a7921d93ae1d81ac70e670e030f.jpg",
+      "wattage": 650,
+      "shortName": "DEEPCOOL PF650"
+    },
+    {
+      "id": "psu-5",
+      "name": "Блок питания Cougar GEC 750 [31GC075.0001P] черный [750 Вт, 80+ Gold, APFC, 20+4 pin, 2 x 4+4 pin CPU, 6 SATA, 4 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/d09be119f4d1c823/blok-pitania-cougar-gec-750-31gc0750001p-cernyj/",
+      "price": 7999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/53bd5eff142bab50cb20a55c2058bdfe/bf486cc709a6a9c8d309b9b20ecb83b205c59c31b54e73ec2f9cd9ae53cfb2b8.jpg",
+      "wattage": 750,
+      "shortName": "Cougar GEC 750"
+    },
+    {
+      "id": "psu-6",
+      "name": "Блок питания Cougar VTE 600W V2 [CGR BS-600] черный [600 Вт, 80+ Bronze, APFC, 20+4 pin, 4+4 pin CPU, 6 SATA, 2 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/f3de275402c4d582/blok-pitania-cougar-vte-600w-v2-cgr-bs-600-cernyj/",
+      "price": 4199,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/756a907df4581f0b212a58f54c977dbe/f15d89f9757f8f30d12b3e074e0f08ec3de6e5ba4760d037cf609c848bfd1504.jpg",
+      "wattage": 600,
+      "shortName": "Cougar VTE 600W V2"
+    },
+    {
+      "id": "psu-7",
+      "name": "Блок питания MSI MPG A850G PCIE5 [306-7ZP7B11-CE0] черный [850 Вт, 80+ Gold, APFC, 20+4 pin, 2 x 4+4 pin CPU, 8 SATA, 16 pin (12VHPWR), 6 x 6+2 pin PCI-E]",
+      "link": "https://www.dns-shop.ru/product/78f2c2318febed20/blok-pitania-msi-mpg-a850g-pcie5-306-7zp7b11-ce0-cernyj/",
+      "price": 17999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/6b70c981f34e21f5ff9463d997828428/3342b4a03d09e287f63068332965950fd34f0e1462b7c6b58eb71b21265a38be.jpg",
+      "wattage": 850,
+      "shortName": "MSI MPG A850G PCIE5"
+    }
+  ],
+  "storage": [
+    {
+      "id": "storage-1",
+      "name": "500 ГБ 2.5\" SATA накопитель Samsung 870 EVO [MZ-77E500BW] [SATA, чтение - 560 Мбайт/сек, запись - 530 Мбайт/сек, 3D NAND 3 бит MLC (TLC), TBW - 300 ТБ]",
+      "link": "https://www.dns-shop.ru/product/cd3ad695f76bed20/500-gb-25-sata-nakopitel-samsung-870-evo-mz-77e500bw/",
+      "price": 5199,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/665bfb500c243df59a3a0a288d8b42a1/b53255cf02a3888250c43476551d8702e9d626dbc96e3884aa355f7fc07ccfbf.jpg",
+      "type": "SSD",
+      "shortName": "500 ГБ Samsung 870 EVO"
+    },
+    {
+      "id": "storage-2",
+      "name": "480 ГБ 2.5\" SATA накопитель Kingston A400 [SA400S37/480G] [SATA, чтение - 500 Мбайт/сек, запись - 450 Мбайт/сек, 3D NAND 3 бит TLC, TBW - 160 ТБ]",
+      "link": "https://www.dns-shop.ru/product/d74ecd0b00cded20/480-gb-25-sata-nakopitel-kingston-a400-sa400s37480g/",
+      "price": 3799,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/0f4587e79652de9e76b638972d7be3c7/5fc1569ac60c68a2e6eb2dc867beac7abde14dca93da7882a1e71ee16b54a525.jpg",
+      "type": "SSD",
+      "shortName": "480 ГБ Kingston A400"
+    },
+    {
+      "id": "storage-3",
+      "name": "1000 ГБ 2.5\" SATA накопитель Samsung 870 EVO [MZ-77E1T0BW] [SATA, чтение - 560 Мбайт/сек, запись - 530 Мбайт/сек, 3D NAND 3 бит MLC (TLC), TBW - 600 ТБ]",
+      "link": "https://www.dns-shop.ru/product/49172afd28f9ed20/1000-gb-25-sata-nakopitel-samsung-870-evo-mz-77e1t0bw/",
+      "price": 8499,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/aec49ba8f4e8aa7b27e2cd349c7bc44f/2a8dc611d1748befbe216861600a5a3432e0d69b63ab5f43c203573041d59394.jpg",
+      "type": "SSD",
+      "shortName": "1000 ГБ Samsung 870 EVO"
+    },
+    {
+      "id": "storage-4",
+      "name": "960 ГБ 2.5\" SATA накопитель Kingston A400 [SA400S37/960G] [SATA, чтение - 500 Мбайт/сек, запись - 450 Мбайт/сек, 3D NAND 3 бит TLC, TBW - 300 ТБ]",
+      "link": "https://www.dns-shop.ru/product/b39a8d59e7a1ed20/960-gb-25-sata-nakopitel-kingston-a400-sa400s37960g/",
+      "price": 5999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/a0d7ddb50fa5a521907df1a764a9a11d/c089bad909b8ffa0147c83c59ac42c486aefcb4b1abd595db625284f94877283.jpg",
+      "type": "SSD",
+      "shortName": "960 ГБ Kingston A400"
+    },
+    {
+      "id": "storage-5",
+      "name": "512 ГБ 2.5\" SATA накопитель Apacer AS350 PANTHER [SATA, чтение - 560 Мбайт/сек, запись - 540 Мбайт/сек, 3D NAND 3 бит TLC, TBW - 320 ТБ]",
+      "link": "https://www.dns-shop.ru/product/778d8c5201153332/512-gb-25-sata-nakopitel-apacer-as350-panther/",
+      "price": 2999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/fac595701d65efe1ae36cdd0dabe22cd/ff1ab7a08cef88d9b8387cb4ba03fec1f97d173c128594945360497b7ab92da0.jpg",
+      "type": "SSD",
+      "shortName": "512 ГБ Apacer AS350 PANTHER"
+    },
+    {
+      "id": "storage-6",
+      "name": "240 ГБ 2.5\" SATA накопитель Kingston A400 [SA400S37/240G] [SATA, чтение - 500 Мбайт/сек, запись - 350 Мбайт/сек, 3D NAND 3 бит TLC, TBW - 80 ТБ]",
+      "link": "https://www.dns-shop.ru/product/d870c9c7e7a0ed20/240-gb-25-sata-nakopitel-kingston-a400-sa400s37240g/",
+      "price": 2650,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/4f9367efa05dc81f16969c9b82898ba2/5e2b1357c1e50314de33b9e65c983df97f4a226262dc728106c37e9857fbac13.jpg",
+      "type": "SSD",
+      "shortName": "240 ГБ Kingston A400"
+    },
+    {
+      "id": "storage-7",
+      "name": "4000 ГБ 2.5\" SATA накопитель Samsung 870 EVO [MZ-77E4T0BW] [SATA, чтение - 560 Мбайт/сек, запись - 530 Мбайт/сек, 3D NAND 3 бит MLC (TLC), TBW - 2400 ТБ]",
+      "link": "https://www.dns-shop.ru/product/fcac32b01dd4ed20/4000-gb-25-sata-nakopitel-samsung-870-evo-mz-77e4t0bw/",
+      "price": 29999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/b2532c70d636603ccbc9485cf7ead199/2fddee1d2faa66c91df8f4581d332087c6883cfa2dc69ea5bae6be596acf2fd1.jpg",
+      "type": "SSD",
+      "shortName": "4000 ГБ Samsung 870 EVO"
+    }
+  ],
+  "fan": [
+    {
+      "id": "fan-1",
+      "name": "Кулер для процессора ID-COOLING SE-224-XTS [SE-224-XTS] [основание - алюминий\\медь, 1500 об/мин, 28.9 дБ, 4 pin, 220 Вт]",
+      "link": "https://www.dns-shop.ru/product/e2949b243404ed20/kuler-dla-processora-id-cooling-se-224-xts-se-224-xts/",
+      "price": 1499,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/9e7d7e71256d64a31533ed6b9a067cca/1df14f6bba96a4d8b2022fb5f7d32a8b84a93b1883935bf9b21b980e71577de9.jpg",
+      "shortName": "ID-COOLING SE-224-XTS"
+    },
+    {
+      "id": "fan-2",
+      "name": "Кулер для процессора ID-COOLING SE-224-XTS ARGB [основание - алюминий\\медь, 1500 об/мин, 28.9 дБ, 4 pin, 220 Вт]",
+      "link": "https://www.dns-shop.ru/product/5e2127f83401ed20/kuler-dla-processora-id-cooling-se-224-xts-argb/",
+      "price": 1699,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/922627b0632c672bd2612faa993474ae/5479adacd3f7bf6a5fef660185f877575547b1b698b7a38fcf010404a1e6e59c.jpg",
+      "shortName": "ID-COOLING SE-224-XTS ARGB"
+    },
+    {
+      "id": "fan-3",
+      "name": "Кулер для процессора DEEPCOOL AG620 [R-AG620-BKNNMN-G-1] [основание - медь, 1850 об/мин, 29.4 дБ, 4 pin, 260 Вт]",
+      "link": "https://www.dns-shop.ru/product/f2c7e6bcea8aed20/kuler-dla-processora-deepcool-ag620-r-ag620-bknnmn-g-1/",
+      "price": 5599,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/1f8808cf44e981153fc54393a2f1f86d/bb35692bfce22ed015adc3d5d2ae1d069400f7568928c9932a48c348b0023449.jpg",
+      "shortName": "DEEPCOOL AG620"
+    },
+    {
+      "id": "fan-4",
+      "name": "Кулер для процессора ID-COOLING SE-903-XT BLACK [SE-903-XT BLACK] [основание - алюминий\\медь, 2200 об/мин, 25.8 дБ, 4 pin, 130 Вт]",
+      "link": "https://www.dns-shop.ru/product/4202bd74ae7eed20/kuler-dla-processora-id-cooling-se-903-xt-black-se-903-xt-black/",
+      "price": 999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/330a43782d6685c1f428caa07c22a676/c4e7212b8c4a9ec3fe523100da2de1c9552fa4525ee68dffb9e98a02134d9017.jpg",
+      "shortName": "ID-COOLING SE-903-XT BLACK"
+    },
+    {
+      "id": "fan-5",
+      "name": "Кулер для процессора ID-COOLING SE-206-XT [основание - медь, 1800 об/мин, 35.2 дБ, 4 pin, 250 Вт]",
+      "link": "https://www.dns-shop.ru/product/a6908de1536ced20/kuler-dla-processora-id-cooling-se-206-xt/",
+      "price": 2599,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/b68bbc3be95353742513f056b12c2a10/fb43664e446b4f93d3c92468913bdddd99349ed8e04148637a3b39f1af6c3a9b.jpg",
+      "shortName": "ID-COOLING SE-206-XT"
+    },
+    {
+      "id": "fan-6",
+      "name": "Кулер для процессора DEEPCOOL AK620 [LGA1700] [R-AK620-BKNNMT-G] [основание - медь, 1850 об/мин, 28 дБ, 4 pin, 260 Вт]",
+      "link": "https://www.dns-shop.ru/product/f65523875885ed20/kuler-dla-processora-deepcool-ak620-lga1700-r-ak620-bknnmt-g/",
+      "price": 4999,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/a43f536c65fa8d129ff40b0129c351aa/2af03faaa5eb582ef09ba817fb746b8d13470af715e70b86c331ffd1772927b8.jpg",
+      "shortName": "DEEPCOOL AK620"
+    },
+    {
+      "id": "fan-7",
+      "name": "Кулер для процессора DEEPCOOL AG300 [R-AG300-BKNNMN-G] [основание - алюминий\\медь, 3050 об/мин, 30.5 дБ, 4 pin, 150 Вт]",
+      "link": "https://www.dns-shop.ru/product/de66fa771d22ed20/kuler-dla-processora-deepcool-ag300-r-ag300-bknnmn-g/",
+      "price": 999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/b1cf4df898b2b66788cdd8ce94cbe6f1/9a5aed3aabb6849fefd804b3e85480432d2eede9625e2eb322eaadcd08bc9fe1.jpg",
+      "shortName": "DEEPCOOL AG300"
+    }
+  ],
+  "thermo": [
+    {
+      "id": "thermo-1",
+      "name": "Термопаста Arctic Cooling MX-4 (2019) [ACTCP00008B] [шприц, 8 г, 8.5 Вт/мК]",
+      "link": "https://www.dns-shop.ru/product/84be09fb17d53332/termopasta-arctic-cooling-mx-4-2019-actcp00008b/",
+      "price": 199,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/cab6dc4c21645dd8e124b606a64f7379/d5d1444aa3446a3339962e75727ba1dfe17d4e1eb17228cdd8ac40a7a2273121.jpg",
+      "shortName": "Arctic Cooling MX-4"
+    },
+    {
+      "id": "thermo-2",
+      "name": "Термопаста Arctic Cooling MX-4 (2019) [ACTCP00002B] [шприц, 4 г, 8.5 Вт/мК]",
+      "link": "https://www.dns-shop.ru/product/84be09f917d53332/termopasta-arctic-cooling-mx-4-2019-actcp00002b/",
+      "price": 299,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/02662e3d78969b5a4be6f86934ef0930/f31d87e964366571dfb1df548e573e31bd2917c1d6544ef955e3a367d1e833ec.jpg",
+      "shortName": "Arctic Cooling MX-4"
+    },
+    {
+      "id": "thermo-3",
+      "name": "Термопаста STEEL Frost Diamond Game-X [STP-5] [шприц, 3 г, 12.6 Вт/мК]",
+      "link": "https://www.dns-shop.ru/product/d1ba56a920511b80/termopasta-steel-frost-diamond-game-x-stp-5/",
+      "price": 499,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/ab3f7c3af4bfe940c3faf71695bfc856/886e10e563608e40925bed6c2d38d173712835218fe01219cd09d12fa77f1b62.jpg",
+      "shortName": "STEEL Frost Diamond Game-X"
+    },
+    {
+      "id": "thermo-4",
+      "name": "Термопаста Arctic Cooling MX-4 [ACTCP00031B] [шприц, 4 г, 8.5 Вт/мК]",
+      "link": "https://www.dns-shop.ru/product/7d7624d7bc3f2ff1/termopasta-arctic-cooling-mx-4-actcp00031b/",
+      "price": 299,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/2ad8682c24e12b71fa940e574b0373f7/66130a3a9a4679976464e12c6ee791eb02328b4ff4fc6b3baea13035dabfa1cc.jpg",
+      "shortName": "Arctic Cooling MX-4"
+    },
+    {
+      "id": "thermo-5",
+      "name": "Термопаста ID-COOLING FROST X25 [шприц, 2 г, 10.5 Вт/мК]",
+      "link": "https://www.dns-shop.ru/product/7929ebfa6485ed20/termopasta-id-cooling-frost-x25/",
+      "price": 399,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/89689d28d059052d4a6507b6aa8768e4/2ddd969385d29ce9bf253d0195bf590e7649d5d7accd663afc363825c194e1ac.jpg",
+      "shortName": "ID-COOLING FROST X25"
+    }
+  ],
+  "case": [
+    {
+      "id": "case-1",
+      "name": "Корпус ZALMAN N4 Rev.1  черный [Mid-Tower, Micro-ATX, Mini-ITX, Standard-ATX, USB 2.0 Type-A, USB 3.2 Gen 1 Type-A, FRGB вентиляторы, 3 x 120 мм, 3 x 140 мм]",
+      "link": "https://www.dns-shop.ru/product/f1707d8a00b9ed20/korpus-zalman-n4-rev1--cernyj/",
+      "price": 4699,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/dee2f5e61eec4e90ba7845f2d397c37e/005cf17b58cdaecf2c8b879bdd75482305fa98aba41d1a410dd8e9cb4ada34c9.jpg",
+      "shortName": "ZALMAN N4 Rev"
+    },
+    {
+      "id": "case-2",
+      "name": "Корпус Cougar FV150 RGB [FV150 RGB black] черный [Mid-Tower, Micro-ATX, Mini-ITX, Standard-ATX, USB 3.2 Gen 1 Type-A, USB 3.2 Gen 2 Type-C, ARGB вентиляторы, 4 x 120 мм]",
+      "link": "https://www.dns-shop.ru/product/8949cc170922d582/korpus-cougar-fv150-rgb-fv150-rgb-black-cernyj/",
+      "price": 7999,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/74547f8128049c49efee55c2ead663d4/aad2b6732b6cc1f3db8f61f9a586b989a5b478ff9fb56ce136224617f6074272.jpg",
+      "shortName": "Cougar FV150 RGB"
+    },
+    {
+      "id": "case-3",
+      "name": "Корпус ARDOR GAMING Rare M2 ARGB  черный [Mid-Tower, E-ATX, Micro-ATX, Mini-ITX, Standard-ATX, USB 2.0 Type-A, USB 3.2 Gen 1 Type-A, ARGB вентиляторы, 4 x 120 мм]",
+      "link": "https://www.dns-shop.ru/product/7b9277cb5ffeed20/korpus-ardor-gaming-rare-m2-argb--cernyj/",
+      "price": 5599,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/f5049a3cf2bfa94591062e37db4dbf87/ff08f890aa46d09aab8f054d2ef8cbfbe7e2e61642541a304093deea91790a22.jpg",
+      "shortName": "ARDOR GAMING Rare M2 ARGB черный"
+    },
+    {
+      "id": "case-4",
+      "name": "Корпус Cougar Duoface Pro RGB [CGR-5AD1B-RGB] черный [Mid-Tower, E-ATX, Micro-ATX, Mini-ITX, SSI-CEB, USB 2.0 Type-A, USB 3.2 Gen 1 Type-A, USB 3.2 Gen 2 Type-C, ARGB вентиляторы, 4 x 120 мм]",
+      "link": "https://www.dns-shop.ru/product/d1a3848c5f26ed20/korpus-cougar-duoface-pro-rgb-cgr-5ad1b-rgb-cernyj/",
+      "price": 8199,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/5e5277ae95e47face62f7033caadcfe9/cfd49a0538d79124ecd9eefc851013e7c6fe6433e5fbebd7494d0fb55b0a8738.jpg",
+      "shortName": "Cougar Duoface Pro RGB"
+    },
+    {
+      "id": "case-5",
+      "name": "Корпус ARDOR GAMING Rare M6  черный [Mid-Tower, Micro-ATX, Mini-ITX, Standard-ATX, USB 2.0 Type-A, USB 3.2 Gen 1 Type-A, ARGB вентиляторы, 3 x 120 мм, 3 x 140 мм]",
+      "link": "https://www.dns-shop.ru/product/4cc7bf0f7716ed20/korpus-ardor-gaming-rare-m6--cernyj/",
+      "price": 6499,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/dd3f78750888efaa2922351da1664670/5f16a22f5f35d885cf80e8f70769dbdd5b8ce7b17971b093e3b9cc5f1c1c41c6.jpg",
+      "shortName": "ARDOR GAMING Rare M6 черный"
+    },
+    {
+      "id": "case-6",
+      "name": "Корпус Cougar MX600 RGB [3857C90.0017] черный [Full-Tower, E-ATX, Micro-ATX, Mini-ITX, SSI-CEB, USB 3.2 Gen 1 Type-A, USB 3.2 Gen 2 Type-C, ARGB вентиляторы, 1 x 120 мм, 3 x 140 мм]",
+      "link": "https://www.dns-shop.ru/product/8093f2344bc6ed20/korpus-cougar-mx600-rgb-3857c900017-cernyj/",
+      "price": 10199,
+      "image": "https://c.dns-shop.ru/thumb/st1/fit/200/200/21f4a735bb58bb6cda0b7a43b2415e20/f30b06c5b5c47f7f348af003bacfb9a9bcff511498794850a889cdd73479550a.jpg",
+      "shortName": "Cougar MX600 RGB"
+    },
+    {
+      "id": "case-7",
+      "name": "Корпус MONTECH KING 95 PRO  черный [Mid-Tower, Micro-ATX, Mini-ITX, Standard-ATX, USB 3.2 Gen 1 Type-A, USB 3.2 Gen 2 Type-C, ARGB вентиляторы, 2 x 140 мм, 4 x 120 мм]",
+      "link": "https://www.dns-shop.ru/product/d84f485d521bed20/korpus-montech-king-95-pro--cernyj/",
+      "price": 16599,
+      "image": "https://c.dns-shop.ru/thumb/st4/fit/200/200/4958e781790cc54d3fa103e610b2752b/2b62aba501b575a15ebdfffe46360dd8b461b8a29150aeb44048cfe132c5b707.png",
+      "shortName": "MONTECH KING 95 PRO черный"
+    }
+  ]
+}

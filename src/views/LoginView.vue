@@ -95,7 +95,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// Логика авторизации
 const authEmail = ref('')
 const authPassword = ref('')
 const authErrors = ref({})
@@ -110,10 +109,8 @@ const handleLogin = () => {
   }
 
   if (Object.keys(authErrors.value).length > 0) return
-  // Отправка формы...
 }
 
-// Логика регистрации
 const regName = ref('')
 const regEmail = ref('')
 const regPassword = ref('')
@@ -137,6 +134,5 @@ const handleRegister = () => {
   }
 
   if (Object.keys(regErrors.value).length > 0) return
-  // Отправка формы...
 }
 </script>

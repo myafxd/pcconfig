@@ -96,10 +96,9 @@
   
   // v-model для radio 
   const localSelected = computed({
-    get: () => props.selected?.value?.id ?? null,
+    get: () => props.selected?.value || null,
     set: (id) => {
-      const item = props.items.find(i => i.id === id)
-      emit('update:selected', { value: item })
+      emit('update:selected', id)
     }
   })
   
@@ -108,6 +107,10 @@
   }
 
   const selectedImage = computed(() => {
-    return props.selected?.value?.image || componentSrc.value
+    const selectedId = props.selected?.value;
+    if (!selectedId) return componentSrc.value;
+    
+    const selected = props.items.find(i => i.id === selectedId);
+    return selected?.image || componentSrc.value;
   })
   </script>

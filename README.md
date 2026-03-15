@@ -1,5 +1,81 @@
-# Vue 3 + Vite
+# PC Component Configurator (PConfig)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## О проекте
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+PConfig — Vue 3 + Vite приложение для подбора комплектующих компьютера с хранением конфигурации, расчетом цены и проверкой совместимости. Backend на Express + Prisma (SQLite), фронтенд на Vue 3 + Pinia + Tailwind.
+
+Реализовано:
+- Каталог компонентов: GPU, CPU, материнские платы, память, блоки питания, хранилище, кулеры, термоинтерфейс, корпуса
+- Конфигуратор с радиокнопками, выбор одной позиции в категории
+- Подсчет итоговой стоимости
+- Сохранение выбранных компонентов через `pinia-plugin-persistedstate`
+- Проверка совместимости: мощность БП, сокеты CPU/MOBO, RAM тип
+- Отдельный backend endpoint: `/api/components/grouped` (сгруппированные компоненты)
+
+---
+
+## Что исправлено 
+
+1. Улучшения совместимости и логики:
+   - `src/scripts/useCompatibility.js`: вынесены `parseNumberField`, `getItemByKey`, `getTotalPrice`, `validateCompatibility`; поддержка разных полей `power`, `watt`, `tdp`, `wattage`.
+   - Проверка DDR-типов RAM и материнской платы: `DDR4/DDR5` требуется совпадение.
+   - Бэкенд/фронтенд: `src/stores/store.js` теперь корректно загружает компоненты из API `/api/components/grouped` и обрабатывает ошибки.
+
+2. UI + состояние:
+   - `ConfigList2.vue`/`ConfigList.vue`: выбор возвращает `id`, настройки с компонентами разрешаются по ID.
+   - `ConfigView.vue`: синхронизация `lastError` из `useCompatibility` и отображение ошибок в красных toast-блоках.
+
+3. Скрипты и запуск:
+   - `package.json`: `dev` теперь запускает сервер (`node server.js`) + фронтенд (`vite`) через `concurrently`.
+   - `store.js`: корректная логика загрузки данных, отображение состояния `isLoading`, а также fallback (было предложено, затем откат недавно).
+
+---
+
+## Что нужно исправить дальше (план)
+
+- Миграция на Nuxt 3 для SSR.
+  - Сейчас: Vue 3 + Vite, клиентский рендер.
+  - Цель: серверный рендер (SEO, первая отрисовка), унифицированная маршрутизация, возможность более простого кеширования.
+
+- Рефакторинг к более чистой архитектуре.
+  - Разделить код на слои: UI (Vue-компоненты), бизнес-логика (сервисы), работа с API/данными (репозитории), модели.
+  - Мелкие задачи: вынести хелперы в отдельные модули, убрать «монстра» в одном файле, больше мелких функций.
+  - Пересобрать большие блоки кода на понятные модули, потому что читаемость и поддержка важнее.
+
+- Перенос на TypeScript.
+  - Переименовать файлы в `.ts`/`.vue`+`<script setup lang="ts">`.
+  - Прописать типы для `selected`, `Component`, `CompatibilityResult`, `Pinia` стейт.
+  - Настроить строгий `tsconfig` (`noImplicitAny`, `strict`, `types`).
+
+- Техдолг и качество:
+  - Покрыть тестами `validateCompatibility`, кейсы по DDR4 vs DDR5, socket, блок питания.
+  - Добавить интеграционные тесты с API и UI (например, Playwright / Cypress).
+  - Упорядочить Prisma-модель `component`, стандартизировать поля (`power`, `socket`, `ramType`).
+  - Переключатель логирования: `console.debug` только в режиме `development`.
+
+---
+
+## Запуск проекта
+
+1. `npm install`
+2. `npm run dev` (запустит API-сервер и фронтенд вместе)
+3. В браузере открыть `http://localhost:5173` (или по адресу Vite)
+
+Дополнительно:
+- `npm run server` — только backend
+- `npm run dev:frontend` — только frontend
+
+---
+
+## Быстрые проверки
+
+- API: `http://localhost:3001/api/components/grouped` должен вернуть JSON.
+- Совместимость RAM: выбранная материнская плата и память должны иметь одинаковый DDR (DDR4/DDR5).
+- Блок питания: суммарная мощность CPU+GPU + запас 100W не должна превышать `psu.power`.
+
+---
+
+## История изменений
+
+См. `.github/copilot-changelog.md` для детального списка правок и рекомендаций.
+

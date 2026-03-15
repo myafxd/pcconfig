@@ -27,6 +27,31 @@ const typeNameMap = {
   Case: 'Корпус'
 }
 
+const categoryTypeMap = {
+  gpu: 'GPU',
+  cpu: 'CPU',
+  mobo: 'Motherboard',
+  ram: 'RAM',
+  psu: 'PSU',
+  storage: 'Storage',
+  fan: 'CoolerFan',
+  thermo: 'ThermalPaste',
+  case: 'Case'
+}
+
+function normalizeComponentsPayload(data) {
+  const normalized = {}
+
+  Object.entries(data).forEach(([key, items]) => {
+    const normalizedKey = categoryTypeMap[key.toLowerCase()] || key
+    if (!normalizedKey || !(normalizedKey in typeNameMap)) return
+
+    normalized[normalizedKey] = Array.isArray(items) ? items : []
+  })
+
+  return normalized
+}
+
 const rawApiUrl = import.meta.env.VITE_API_URL || '/api'
 const API_URL = rawApiUrl.replace(/\/$/, '')
 
@@ -66,34 +91,69 @@ export const useConfigStore = defineStore('config', {
     async loadComponents() {
       this.isLoading = true
       this.lastError = null
+
+      const endpoint = API_URL === '/api' ? '/api/components/grouped' : `${API_URL}/api/components/grouped`
+
       try {
-        const endpoint = API_URL === '/api' ? '/api/components/grouped' : `${API_URL}/api/components/grouped`
-      const res = await fetch(endpoint)
+        const res = await fetch(endpoint)
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`)
+
         const data = await res.json()
-        this.allComponents = data
-        this.components = Object.keys(data)
+        const normalizedData = normalizeComponentsPayload(data)
+
+        this.allComponents = normalizedData
+        this.components = Object.keys(normalizedData)
           .filter(type => type in typeIconMap)
           .map(type => ({
             key: type,
             name: typeNameMap[type] || type,
-            items: data[type],
+            items: normalizedData[type],
             icon: typeIconMap[type]
           }))
-        Object.keys(data).forEach(type => {
+
+        Object.keys(normalizedData).forEach(type => {
           if (!(type in this.selected)) this.selected[type] = { value: null }
         })
       } catch (err) {
-        const msg = err instanceof Error ? err.message : 'Unknown error'
-        this.lastError = `Ошибка загрузки компонентов: ${msg}`
-        console.error(this.lastError, err)
+        console.warn('loadComponents api fallback:', err)
+        await this.loadComponentsFromStatic() // fallback to static data
       } finally {
         this.isLoading = false
       }
     },
+
+    async loadComponentsFromStatic() {
+      try {
+        const module = await import('../scripts/products.json')
+        const rawData = module.default || module
+        const normalizedData = normalizeComponentsPayload(rawData)
+
+        this.allComponents = normalizedData
+        this.components = Object.keys(normalizedData)
+          .filter(type => type in typeIconMap)
+          .map(type => ({
+            key: type,
+            name: typeNameMap[type] || type,
+            items: normalizedData[type],
+            icon: typeIconMap[type]
+          }))
+
+        Object.keys(normalizedData).forEach(type => {
+          if (!(type in this.selected)) this.selected[type] = { value: null }
+        })
+
+        this.lastError = null
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : 'Unknown error'
+        this.lastError = `Ошибка загрузки компонентов: ${msg}`
+        console.error(this.lastError, err)
+      }
+    },
+
     setSelected(categoryKey, value) {
       if (this.selected[categoryKey]) this.selected[categoryKey].value = value
     },
+
     clearSelected() {
       Object.keys(this.selected).forEach(key => (this.selected[key].value = null))
     }

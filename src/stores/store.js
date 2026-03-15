@@ -27,7 +27,8 @@ const typeNameMap = {
   Case: 'Корпус'
 }
 
-const API_URL = import.meta.env.VITE_API_URL || '/api'
+const rawApiUrl = import.meta.env.VITE_API_URL || '/api'
+const API_URL = rawApiUrl.replace(/\/$/, '')
 
 export const useConfigStore = defineStore('config', {
   state: () => ({
@@ -66,7 +67,8 @@ export const useConfigStore = defineStore('config', {
       this.isLoading = true
       this.lastError = null
       try {
-        const res = await fetch(`${API_URL}/api/components/grouped`)
+        const endpoint = API_URL === '/api' ? '/api/components/grouped' : `${API_URL}/api/components/grouped`
+      const res = await fetch(endpoint)
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`)
         const data = await res.json()
         this.allComponents = data

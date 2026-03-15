@@ -45,14 +45,8 @@
                     <template v-for="comp in configStore.components" :key="comp.key">
                         <div v-if="selected[comp.key]?.value" class="text-sm">
                             <div class="text-gray-600 dark:text-gray-400 text-lg">{{ comp.name }}</div>
-<<<<<<< HEAD
                             <div class="-mt-2 text-xl">{{ selected[comp.key].value.shortName ||
                                 selected[comp.key].value.name }}</div>
-=======
-                            <div class="-mt-2 text-xl">
-                               {{ (getSelectedItem(comp.key)?.shortName) || (getSelectedItem(comp.key)?.name) || String(selected[comp.key].value) }}
-                            </div>
->>>>>>> e731792 (test ver 2.0)
                         </div>
                     </template>
                 </div>

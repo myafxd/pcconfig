@@ -2,8 +2,8 @@
     <div class="bg-[#DFDFDF] dark:bg-[#202020] text-black dark:text-white text-lg mt-6 rounded-2xl mb-8 max-w-md mx-auto">
         <img :src="placeholderSrc" class="object-cover block w-auto h-auto rounded-t-2xl mx-auto">
         <div class="p-4 flex flex-col flex-grow">
-            <h3 class="text-4xl text-left font-semibold">Сборка #8840</h3>
-            <hr class="mb-4 mt-1 w-auto border-neutral-700">
+            <h3 class="text-4xl text-left font-semibold">Сборка #{{ configId }}</h3>
+            <hr class="my-2 w-auto border-neutral-700">
             <p class="text-blue-500/80 font-medium text-3xl mt-1">
                 {{ totalPrice }}₽
             </p>
@@ -45,8 +45,7 @@
                     <template v-for="comp in configStore.components" :key="comp.key">
                         <div v-if="selected[comp.key]?.value" class="text-sm">
                             <div class="text-gray-600 dark:text-gray-400 text-lg">{{ comp.name }}</div>
-                            <div class="-mt-2 text-xl">{{ selected[comp.key].value.shortName ||
-                                selected[comp.key].value.name }}</div>
+                            <div class="-mt-1 text-xl">{{ getSelectedItem(comp.key)?.shortName || getSelectedItem(comp.key)?.name }}</div>
                         </div>
                     </template>
                 </div>
@@ -63,6 +62,7 @@ import { RouterLink } from 'vue-router';
 import { placeholderSrc } from '../scripts/themeImage.js'
 import { getTotalPrice, validateCompatibility } from '../scripts/useCompatibility.js'
 
+const configId = 1234;
 
 const configStore = useConfigStore();
 const selected = configStore.selected;

@@ -76,8 +76,8 @@
                         <ul class="mb-2">
                             <template v-for="comp in selectedComponents" :key="comp.key">
                                 <div v-if="selected[comp.key]?.value" class="text-sm">
-                                    <div class="text-gray-600 dark:text-gray-400 text-lg">{{ comp.name }}</div>
-                                    <div class="-mt-2 text-xl">{{ getSelectedItem(comp.key)?.shortName || getSelectedItem(comp.key)?.name || String(selected[comp.key].value) }}</div>
+                                    <div class="text-gray-600 dark:text-gray-400 text-lg mt-1 -mb-1">{{ comp.name }}</div>
+                                    <div class="text-xl">{{ getSelectedItem(comp.key)?.shortName || getSelectedItem(comp.key)?.name || String(selected[comp.key].value) }}</div>
                                 </div>
                             </template>
                             <div v-if="hasMore" class="relative flex py-5 items-center">
@@ -111,7 +111,7 @@
     </div>
 </template>
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useConfigStore } from '../stores/store.js'
 import { imageSrc } from '../scripts/themeImage.js'
 import { getTotalPrice, validateCompatibility } from '../scripts/useCompatibility.js'
@@ -119,6 +119,12 @@ import { getTotalPrice, validateCompatibility } from '../scripts/useCompatibilit
 const configStore = useConfigStore()
 const selected = configStore.selected
 const isExpanded = ref(false)
+
+onMounted(async () => {
+    if (Object.keys(configStore.allComponents).length === 0) {
+        await configStore.loadComponents()
+    }
+})
 
 const selectedComponents = computed(() => {
     const filtered = configStore.components.filter(comp => comp && selected[comp.key]?.value)
